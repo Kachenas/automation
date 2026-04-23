@@ -6,13 +6,6 @@ on:
       - main
 
   workflow_dispatch:
-    inputs:
-      environment:
-        description: "Environment to deploy to"
-        required: true
-        type: choice
-        options:
-          - main
 
 permissions:
   id-token: write
@@ -20,29 +13,30 @@ permissions:
 
 jobs:
   deploy:
-    name: Build & Deploy
+    name: Deploy Static Site
     runs-on: ubuntu-latest
-    environment: ${{ github.ref_name == 'main' }}
+    environment: production
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "22"
-          cache: "npm"
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build application
-        run: npm run build
-        env:
-          VITE_API_BASE_URL: ${{ vars.VITE_API_BASE_URL }}
-          VITE_APP_CONTACT_EMAIL: ${{ vars.VITE_APP_CONTACT_EMAIL }}
-          VITE_RECAPTCHA_V3_SITEKEY: ${{ vars.VITE_RECAPTCHA_V3_SITEKEY }}
+      - name: Validate static files exist
+        run: |
+          echo "Validating required files..."
+          missing=0
+          for f in index.html contact.html error.html header.html footer.html css/styles.css js/main.js; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Missing required file: $f"
+              missing=1
+            else
+              echo "  Found: $f"
+            fi
+          done
+          if [ "$missing" -eq 1 ]; then
+            exit 1
+          fi
+          echo "All required files present."
 
       - name: Configure AWS credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
@@ -50,22 +44,55 @@ jobs:
           role-to-assume: ${{ vars.AWS_IAM_ROLE }}
           aws-region: ${{ vars.AWS_REGION }}
 
-      - name: Deploy assets to S3 (long cache)
+      # Step 1: Sync all files to S3 with --delete to remove stale files.
+      # --size-only avoids re-uploading unchanged files (timestamps always
+      # differ on fresh checkout).
+      - name: Sync all files to S3
         run: |
-          aws s3 sync dist/ s3://${{ vars.S3_BUCKET_NAME }}/ \
+          aws s3 sync ./ s3://${{ vars.S3_BUCKET_NAME }}/ \
             --delete \
-            --cache-control "public, max-age=31536000, immutable" \
-            --exclude "index.html" \
-            --exclude "*.txt"
+            --size-only \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude ".gitignore" \
+            --exclude ".vscode/*"
 
-      - name: Deploy index.html to S3 (no cache)
+      # Step 2: Apply cache headers per file type.
+      # HTML — short cache so users always get fresh content.
+      - name: Set cache headers on HTML files
         run: |
-          aws s3 sync dist/ s3://${{ vars.S3_BUCKET_NAME }}/ \
-            --cache-control "public, max-age=0, must-revalidate" \
+          aws s3 cp s3://${{ vars.S3_BUCKET_NAME }}/ s3://${{ vars.S3_BUCKET_NAME }}/ \
+            --recursive \
             --exclude "*" \
-            --include "index.html" \
-            --include "*.txt"
+            --include "*.html" \
+            --metadata-directive REPLACE \
+            --cache-control "public, max-age=0, must-revalidate" \
+            --content-type "text/html"
 
+      # CSS — 1-year cache (invalidated via CloudFront on deploy).
+      - name: Set cache headers on CSS files
+        run: |
+          aws s3 cp s3://${{ vars.S3_BUCKET_NAME }}/ s3://${{ vars.S3_BUCKET_NAME }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.css" \
+            --metadata-directive REPLACE \
+            --cache-control "public, max-age=31536000, immutable" \
+            --content-type "text/css"
+
+      # JS — 1-year cache (invalidated via CloudFront on deploy).
+      - name: Set cache headers on JS files
+        run: |
+          aws s3 cp s3://${{ vars.S3_BUCKET_NAME }}/ s3://${{ vars.S3_BUCKET_NAME }}/ \
+            --recursive \
+            --exclude "*" \
+            --include "*.js" \
+            --metadata-directive REPLACE \
+            --cache-control "public, max-age=31536000, immutable" \
+            --content-type "application/javascript"
+
+      # Step 3: Invalidate CloudFront.
+      # /* is fine for a small site — a single wildcard invalidation is free.
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
@@ -74,9 +101,12 @@ jobs:
 
       - name: Deployment summary
         run: |
-          ENV_NAME="${{ github.event.inputs.environment || (github.ref_name == 'main' && 'production' || 'staging') }}"
           echo "### Deployment Successful" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Environment**: ${ENV_NAME}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Environment**: production" >> $GITHUB_STEP_SUMMARY
           echo "- **Branch**: ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Commit**: ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Files deployed**:" >> $GITHUB_STEP_SUMMARY
+          find . -not -path './.git/*' -not -path './.github/*' -not -path './.vscode/*' -not -name '.gitignore' -type f | sort | while read f; do
+            echo "  - ${f#./}" >> $GITHUB_STEP_SUMMARY
+          done
