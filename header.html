@@ -1,0 +1,78 @@
+<nav
+  class="fixed top-0 left-0 w-full z-50"
+  style="
+    background: rgba(var(--nav-rgb), 0.8);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(var(--accent-1-rgb), 0.08);
+  "
+>
+  <div
+    class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+  >
+    <a href="index.html" class="flex items-center gap-2">
+      <div
+        class="w-8 h-8 rounded-lg flex items-center justify-center"
+        style="background: linear-gradient(135deg, var(--accent-1), var(--accent-2))"
+      >
+        <i
+          data-lucide="zap"
+          style="width: 18px; height: 18px; color: #fff"
+        ></i>
+      </div>
+      <span
+        class="font-mono-accent font-bold text-lg tracking-tight"
+        style="color: var(--text-heading)"
+        >Vibe Check Automation Platform</span
+      >
+    </a>
+    <div
+      class="hidden md:flex items-center gap-8 text-sm"
+      style="color: rgba(var(--text-rgb), 0.5)"
+    >
+      <a href="index.html#problems" class="transition-colors"
+        style="color: inherit;"
+        onmouseover="this.style.color='var(--text-heading)'"
+        onmouseout="if(!this.classList.contains('nav-link-active'))this.style.color='inherit'"
+        >Problems</a
+      >
+      <a href="index.html#services" class="transition-colors"
+        style="color: inherit;"
+        onmouseover="this.style.color='var(--text-heading)'"
+        onmouseout="if(!this.classList.contains('nav-link-active'))this.style.color='inherit'"
+        >Services</a
+      >
+      <a href="index.html#process" class="transition-colors"
+        style="color: inherit;"
+        onmouseover="this.style.color='var(--text-heading)'"
+        onmouseout="if(!this.classList.contains('nav-link-active'))this.style.color='inherit'"
+        >Process</a
+      >
+      <a href="index.html#results" class="transition-colors"
+        style="color: inherit;"
+        onmouseover="this.style.color='var(--text-heading)'"
+        onmouseout="if(!this.classList.contains('nav-link-active'))this.style.color='inherit'"
+        >Results</a
+      >
+      <a href="contact.html" data-nav-page="contact" class="transition-colors"
+        style="color: inherit;"
+        onmouseover="this.style.color='var(--text-heading)'"
+        onmouseout="if(!this.classList.contains('nav-link-active'))this.style.color='inherit'"
+        >Contact</a
+      >
+    </div>
+    <div class="flex items-center gap-3">
+      <button
+        id="theme-toggle"
+        class="theme-toggle w-9 h-9 rounded-full flex items-center justify-center"
+        aria-label="Toggle theme"
+      >
+        <i data-lucide="moon" style="width: 16px; height: 16px;"></i>
+      </button>
+      <a
+        href="contact.html"
+        class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white cursor-pointer hidden sm:inline-block"
+        ><span>Get Started</span></a
+      >
+    </div>
+  </div>
+</nav>

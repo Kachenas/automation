@@ -1,3 +1,40 @@
+// ===== Theme Toggle =====
+function getStoredTheme() {
+  return localStorage.getItem("theme") || "";
+}
+
+function applyTheme(theme) {
+  if (theme === "navy-gold") {
+    document.documentElement.setAttribute("data-theme", "navy-gold");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+  updateToggleIcon(theme);
+}
+
+function updateToggleIcon(theme) {
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+  const icon = btn.querySelector("[data-lucide]");
+  if (!icon) return;
+  icon.setAttribute("data-lucide", theme === "navy-gold" ? "sun" : "moon");
+  if (typeof lucide !== "undefined") lucide.createIcons();
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute("data-theme");
+  const next = current === "navy-gold" ? "" : "navy-gold";
+  if (next) {
+    localStorage.setItem("theme", next);
+  } else {
+    localStorage.removeItem("theme");
+  }
+  applyTheme(next);
+}
+
+// Apply stored theme immediately
+applyTheme(getStoredTheme());
+
 // ===== Tailwind Config =====
 if (typeof tailwind !== "undefined") {
   tailwind.config = {
@@ -11,6 +48,49 @@ if (typeof tailwind !== "undefined") {
     },
   };
 }
+
+// ===== Shared Header Loader =====
+async function loadHeader() {
+  const placeholder = document.getElementById("header-placeholder");
+  if (!placeholder) return;
+  try {
+    const resp = await fetch("header.html");
+    placeholder.innerHTML = await resp.text();
+    const activePage = placeholder.getAttribute("data-active-page");
+    if (activePage) {
+      const link = placeholder.querySelector(`[data-nav-page="${activePage}"]`);
+      if (link) {
+        link.classList.add("nav-link-active");
+      }
+    }
+    // Bind theme toggle
+    const toggleBtn = document.getElementById("theme-toggle");
+    if (toggleBtn) {
+      toggleBtn.addEventListener("click", toggleTheme);
+    }
+    // Update icon to match current theme
+    updateToggleIcon(getStoredTheme());
+    if (typeof lucide !== "undefined") lucide.createIcons();
+  } catch (e) {
+    console.error("Failed to load header:", e);
+  }
+}
+loadHeader();
+
+// ===== Shared Footer Loader =====
+async function loadFooter() {
+  const placeholder = document.getElementById("footer-placeholder");
+  if (!placeholder) return;
+  try {
+    const resp = await fetch("footer.html");
+    placeholder.innerHTML = await resp.text();
+    setCurrentYear();
+    if (typeof lucide !== "undefined") lucide.createIcons();
+  } catch (e) {
+    console.error("Failed to load footer:", e);
+  }
+}
+loadFooter();
 
 // ===== Default Config =====
 const defaultConfig = {
@@ -67,11 +147,7 @@ function applyConfig(config) {
     const text = c("hero_headline");
     heroH.innerHTML = text.replace(
       /(Actually Work|That Actually Work)/g,
-      '<span style="background: linear-gradient(135deg, ' +
-        c("accent_blue") +
-        ", " +
-        c("accent_violet") +
-        ', #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$1</span>'
+      '<span style="background: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$1</span>'
     );
   }
 

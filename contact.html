@@ -19,61 +19,7 @@
       class="w-full h-full overflow-auto grid-bg"
       style="background-color: var(--bg-primary)"
     >
-      <!-- NAV -->
-      <nav
-        class="fixed top-0 left-0 w-full z-50"
-        style="
-          background: rgba(6, 6, 14, 0.8);
-          backdrop-filter: blur(20px);
-          border-bottom: 1px solid rgba(79, 109, 245, 0.08);
-        "
-      >
-        <div
-          class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
-        >
-          <a href="index.html" class="flex items-center gap-2">
-            <div
-              class="w-8 h-8 rounded-lg flex items-center justify-center"
-              style="background: linear-gradient(135deg, #4f6df5, #8b5cf6)"
-            >
-              <i
-                data-lucide="zap"
-                style="width: 18px; height: 18px; color: #fff"
-              ></i>
-            </div>
-            <span
-              class="font-mono-accent font-bold text-lg tracking-tight"
-              style="color: #e2e4f0"
-              >NEXFLOW</span
-            >
-          </a>
-          <div
-            class="hidden md:flex items-center gap-8 text-sm"
-            style="color: rgba(226, 228, 240, 0.5)"
-          >
-            <a href="index.html#problems" class="hover:text-white transition-colors"
-              >Problems</a
-            >
-            <a href="index.html#services" class="hover:text-white transition-colors"
-              >Services</a
-            >
-            <a href="index.html#process" class="hover:text-white transition-colors"
-              >Process</a
-            >
-            <a href="index.html#results" class="hover:text-white transition-colors"
-              >Results</a
-            >
-            <a href="contact.html" class="text-white transition-colors"
-              >Contact</a
-            >
-          </div>
-          <a
-            href="contact.html"
-            class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white cursor-pointer hidden sm:inline-block"
-            ><span>Get Started</span></a
-          >
-        </div>
-      </nav>
+      <div id="header-placeholder" data-active-page="contact"></div>
 
       <!-- HERO HEADER -->
       <section
@@ -85,7 +31,7 @@
           style="
             width: 500px;
             height: 500px;
-            background: rgba(79, 109, 245, 0.08);
+            background: rgba(var(--accent-1-rgb), 0.08);
             top: -100px;
             left: -150px;
           "
@@ -95,7 +41,7 @@
           style="
             width: 400px;
             height: 400px;
-            background: rgba(139, 92, 246, 0.06);
+            background: rgba(var(--accent-2-rgb), 0.06);
             bottom: -100px;
             right: -100px;
             animation-delay: -3s;
@@ -105,21 +51,21 @@
           <div
             class="inline-block mb-6 px-4 py-1.5 rounded-full text-xs font-mono-accent tracking-widest"
             style="
-              background: rgba(79, 109, 245, 0.08);
-              border: 1px solid rgba(79, 109, 245, 0.2);
-              color: #8ba0ff;
+              background: rgba(var(--accent-1-rgb), 0.08);
+              border: 1px solid rgba(var(--accent-1-rgb), 0.2);
+              color: var(--accent-light-2);
             "
           >
             GET IN TOUCH
           </div>
           <h1
             class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
-            style="color: #f0f1f7"
+            style="color: var(--text-heading)"
           >
             Let's Build Something<br />
             <span
               style="
-                background: linear-gradient(135deg, #4f6df5, #8b5cf6, #c084fc);
+                background: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3));
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
               "
@@ -128,7 +74,7 @@
           </h1>
           <p
             class="mt-6 text-lg leading-relaxed max-w-2xl mx-auto"
-            style="color: rgba(226, 228, 240, 0.55)"
+            style="color: rgba(var(--text-rgb), 0.55)"
           >
             Have a project in mind or want to explore how automation can
             transform your business? We'd love to hear from you.
@@ -146,19 +92,19 @@
             <div class="flex-1 reveal">
               <p
                 class="font-mono-accent text-xs tracking-widest mb-4"
-                style="color: #8b5cf6"
+                style="color: var(--accent-2)"
               >
                 CONTACT INFO
               </p>
               <h2
                 class="text-3xl sm:text-4xl font-bold tracking-tight mb-8"
-                style="color: #f0f1f7"
+                style="color: var(--text-heading)"
               >
                 Reach Out Anytime
               </h2>
               <p
                 class="text-base leading-relaxed mb-10"
-                style="color: rgba(226, 228, 240, 0.5)"
+                style="color: rgba(var(--text-rgb), 0.5)"
               >
                 Whether you're ready to start a project or just exploring your
                 options, our team is here to help you find the right automation
@@ -169,20 +115,20 @@
                 <div class="flex items-start gap-4">
                   <div
                     class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
-                    style="background: rgba(79, 109, 245, 0.1)"
+                    style="background: rgba(var(--accent-1-rgb), 0.1)"
                   >
                     <i
                       data-lucide="mail"
-                      style="width: 22px; height: 22px; color: #4f6df5"
+                      style="width: 22px; height: 22px; color: var(--accent-1)"
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
                       Email Us
                     </h3>
                     <p
                       class="text-sm"
-                      style="color: rgba(226, 228, 240, 0.45)"
+                      style="color: rgba(var(--text-rgb), 0.45)"
                     >
                       hello@nexflow.ai
                     </p>
@@ -192,20 +138,20 @@
                 <div class="flex items-start gap-4">
                   <div
                     class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
-                    style="background: rgba(139, 92, 246, 0.1)"
+                    style="background: rgba(var(--accent-2-rgb), 0.1)"
                   >
                     <i
                       data-lucide="phone"
-                      style="width: 22px; height: 22px; color: #8b5cf6"
+                      style="width: 22px; height: 22px; color: var(--accent-2)"
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
                       Call Us
                     </h3>
                     <p
                       class="text-sm"
-                      style="color: rgba(226, 228, 240, 0.45)"
+                      style="color: rgba(var(--text-rgb), 0.45)"
                     >
                       +1 (555) 123-4567
                     </p>
@@ -215,20 +161,20 @@
                 <div class="flex items-start gap-4">
                   <div
                     class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
-                    style="background: rgba(79, 109, 245, 0.1)"
+                    style="background: rgba(var(--accent-1-rgb), 0.1)"
                   >
                     <i
                       data-lucide="map-pin"
-                      style="width: 22px; height: 22px; color: #4f6df5"
+                      style="width: 22px; height: 22px; color: var(--accent-1)"
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
                       Location
                     </h3>
                     <p
                       class="text-sm"
-                      style="color: rgba(226, 228, 240, 0.45)"
+                      style="color: rgba(var(--text-rgb), 0.45)"
                     >
                       Remote-first, serving clients worldwide
                     </p>
@@ -238,20 +184,20 @@
                 <div class="flex items-start gap-4">
                   <div
                     class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
-                    style="background: rgba(139, 92, 246, 0.1)"
+                    style="background: rgba(var(--accent-2-rgb), 0.1)"
                   >
                     <i
                       data-lucide="clock"
-                      style="width: 22px; height: 22px; color: #8b5cf6"
+                      style="width: 22px; height: 22px; color: var(--accent-2)"
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
                       Response Time
                     </h3>
                     <p
                       class="text-sm"
-                      style="color: rgba(226, 228, 240, 0.45)"
+                      style="color: rgba(var(--text-rgb), 0.45)"
                     >
                       We typically respond within 24 hours
                     </p>
@@ -265,7 +211,7 @@
               <div class="glass-card rounded-2xl p-8 sm:p-10">
                 <h3
                   class="text-xl font-bold mb-6"
-                  style="color: #e2e4f0"
+                  style="color: var(--text-primary)"
                 >
                   Send Us a Message
                 </h3>
@@ -275,7 +221,7 @@
                       <label
                         for="name"
                         class="block text-xs font-mono-accent tracking-wider mb-2"
-                        style="color: rgba(226, 228, 240, 0.4)"
+                        style="color: rgba(var(--text-rgb), 0.4)"
                         >NAME</label
                       >
                       <input
@@ -291,7 +237,7 @@
                       <label
                         for="email"
                         class="block text-xs font-mono-accent tracking-wider mb-2"
-                        style="color: rgba(226, 228, 240, 0.4)"
+                        style="color: rgba(var(--text-rgb), 0.4)"
                         >EMAIL</label
                       >
                       <input
@@ -308,7 +254,7 @@
                     <label
                       for="subject"
                       class="block text-xs font-mono-accent tracking-wider mb-2"
-                      style="color: rgba(226, 228, 240, 0.4)"
+                      style="color: rgba(var(--text-rgb), 0.4)"
                       >SUBJECT</label
                     >
                     <select
@@ -330,7 +276,7 @@
                     <label
                       for="message"
                       class="block text-xs font-mono-accent tracking-wider mb-2"
-                      style="color: rgba(226, 228, 240, 0.4)"
+                      style="color: rgba(var(--text-rgb), 0.4)"
                       >MESSAGE</label
                     >
                     <textarea
@@ -350,7 +296,7 @@
                   </button>
                   <p
                     class="text-center text-xs font-mono-accent"
-                    style="color: rgba(139, 92, 246, 0.5)"
+                    style="color: rgba(var(--accent-2-rgb), 0.5)"
                   >
                     We'll get back to you within 24 hours
                   </p>
@@ -369,37 +315,37 @@
           <div class="text-center mb-16 reveal">
             <p
               class="font-mono-accent text-xs tracking-widest mb-4"
-              style="color: #4f6df5"
+              style="color: var(--accent-1)"
             >
               FAQ
             </p>
             <h2
               class="text-3xl sm:text-4xl font-bold tracking-tight"
-              style="color: #f0f1f7"
+              style="color: var(--text-heading)"
             >
               Common Questions
             </h2>
           </div>
           <div class="space-y-4">
             <div class="glass-card rounded-2xl p-6 reveal stagger-1">
-              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
                 How long does it take to build an automation system?
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Most projects take 2-6 weeks from discovery to deployment,
                 depending on complexity. Simple workflows can be live in days.
               </p>
             </div>
             <div class="glass-card rounded-2xl p-6 reveal stagger-2">
-              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
                 What does the free automation audit include?
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 We'll map your current workflows, identify bottlenecks, and
                 provide a prioritized list of automation opportunities with
@@ -407,12 +353,12 @@
               </p>
             </div>
             <div class="glass-card rounded-2xl p-6 reveal stagger-3">
-              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
                 Do you work with businesses of all sizes?
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Yes. From startups looking to automate from day one to
                 enterprises optimizing existing operations, we tailor solutions
@@ -420,12 +366,12 @@
               </p>
             </div>
             <div class="glass-card rounded-2xl p-6 reveal stagger-4">
-              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
                 What tools and platforms do you integrate with?
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 We integrate with 500+ tools including Slack, HubSpot, Stripe,
                 Google Workspace, Notion, Airtable, Shopify, and any platform
@@ -436,76 +382,7 @@
         </div>
       </section>
 
-      <!-- FOOTER -->
-      <footer
-        class="w-full py-12"
-        style="border-top: 1px solid rgba(79, 109, 245, 0.08)"
-      >
-        <div class="max-w-7xl mx-auto px-6">
-          <div
-            class="flex flex-col md:flex-row items-center justify-between gap-6"
-          >
-            <a href="index.html" class="flex items-center gap-2">
-              <div
-                class="w-7 h-7 rounded-md flex items-center justify-center"
-                style="background: linear-gradient(135deg, #4f6df5, #8b5cf6)"
-              >
-                <i
-                  data-lucide="zap"
-                  style="width: 14px; height: 14px; color: #fff"
-                ></i>
-              </div>
-              <span
-                class="font-mono-accent font-bold text-sm"
-                style="color: rgba(226, 228, 240, 0.6)"
-                >NEXFLOW</span
-              >
-            </a>
-            <div class="flex items-center gap-6">
-              <a
-                href="#"
-                onclick="event.preventDefault()"
-                style="color: rgba(226, 228, 240, 0.3)"
-                class="hover:text-white transition-colors"
-                ><i
-                  data-lucide="twitter"
-                  style="width: 18px; height: 18px"
-                ></i
-              ></a>
-              <a
-                href="#"
-                onclick="event.preventDefault()"
-                style="color: rgba(226, 228, 240, 0.3)"
-                class="hover:text-white transition-colors"
-                ><i
-                  data-lucide="linkedin"
-                  style="width: 18px; height: 18px"
-                ></i
-              ></a>
-              <a
-                href="#"
-                onclick="event.preventDefault()"
-                style="color: rgba(226, 228, 240, 0.3)"
-                class="hover:text-white transition-colors"
-                ><i
-                  data-lucide="github"
-                  style="width: 18px; height: 18px"
-                ></i
-              ></a>
-              <a
-                href="#"
-                onclick="event.preventDefault()"
-                style="color: rgba(226, 228, 240, 0.3)"
-                class="hover:text-white transition-colors"
-                ><i data-lucide="mail" style="width: 18px; height: 18px"></i
-              ></a>
-            </div>
-            <p class="text-xs" style="color: rgba(226, 228, 240, 0.25)">
-              &copy; 2025 Nexflow. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <div id="footer-placeholder"></div>
     </div>
     <script src="js/main.js"></script>
   </body>

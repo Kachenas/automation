@@ -21,61 +21,7 @@
       class="w-full h-full overflow-auto grid-bg"
       style="background-color: var(--bg-primary)"
     >
-      <!-- NAV -->
-      <nav
-        class="fixed top-0 left-0 w-full z-50"
-        style="
-          background: rgba(6, 6, 14, 0.8);
-          backdrop-filter: blur(20px);
-          border-bottom: 1px solid rgba(79, 109, 245, 0.08);
-        "
-      >
-        <div
-          class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
-        >
-          <div class="flex items-center gap-2">
-            <div
-              class="w-8 h-8 rounded-lg flex items-center justify-center"
-              style="background: linear-gradient(135deg, #4f6df5, #8b5cf6)"
-            >
-              <i
-                data-lucide="zap"
-                style="width: 18px; height: 18px; color: #fff"
-              ></i>
-            </div>
-            <span
-              class="font-mono-accent font-bold text-lg tracking-tight"
-              style="color: #e2e4f0"
-              >Vibe Check Automation Platform</span
-            >
-          </div>
-          <div
-            class="hidden md:flex items-center gap-8 text-sm"
-            style="color: rgba(226, 228, 240, 0.5)"
-          >
-            <a href="#problems" class="hover:text-white transition-colors"
-              >Problems</a
-            >
-            <a href="#services" class="hover:text-white transition-colors"
-              >Services</a
-            >
-            <a href="#process" class="hover:text-white transition-colors"
-              >Process</a
-            >
-            <a href="#results" class="hover:text-white transition-colors"
-              >Results</a
-            >
-            <a href="contact.html" class="hover:text-white transition-colors"
-              >Contact</a
-            >
-          </div>
-          <a
-            href="contact.html"
-            class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white cursor-pointer hidden sm:inline-block"
-            ><span>Get Started</span></a
-          >
-        </div>
-      </nav>
+      <div id="header-placeholder"></div>
       <!-- HERO -->
       <section
         class="relative w-full overflow-hidden"
@@ -87,7 +33,7 @@
           style="
             width: 500px;
             height: 500px;
-            background: rgba(79, 109, 245, 0.08);
+            background: rgba(var(--accent-1-rgb), 0.08);
             top: -100px;
             left: -150px;
           "
@@ -97,7 +43,7 @@
           style="
             width: 400px;
             height: 400px;
-            background: rgba(139, 92, 246, 0.06);
+            background: rgba(var(--accent-2-rgb), 0.06);
             bottom: -100px;
             right: -100px;
             animation-delay: -3s;
@@ -110,9 +56,9 @@
             <div
               class="inline-block mb-6 px-4 py-1.5 rounded-full text-xs font-mono-accent tracking-widest"
               style="
-                background: rgba(79, 109, 245, 0.08);
-                border: 1px solid rgba(79, 109, 245, 0.2);
-                color: #8ba0ff;
+                background: rgba(var(--accent-1-rgb), 0.08);
+                border: 1px solid rgba(var(--accent-1-rgb), 0.2);
+                color: var(--accent-light-2);
               "
             >
               AI-POWERED AUTOMATION
@@ -120,16 +66,16 @@
             <h1
               id="hero-headline"
               class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
-              style="color: #f0f1f7"
+              style="color: var(--text-heading)"
             >
               Automate Your Business<br />
               with AI Agents That<br /><span
                 style="
                   background: linear-gradient(
                     135deg,
-                    #4f6df5,
-                    #8b5cf6,
-                    #c084fc
+                    var(--accent-1),
+                    var(--accent-2),
+                    var(--accent-3)
                   );
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
@@ -140,7 +86,7 @@
             <p
               id="hero-subheadline"
               class="mt-6 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
-              style="color: rgba(226, 228, 240, 0.55)"
+              style="color: rgba(var(--text-rgb), 0.55)"
             >
               We design intelligent systems using AI + automation tools like n8n
               to eliminate repetitive work, reduce costs, and scale your
@@ -272,7 +218,7 @@
                 cx="200"
                 cy="100"
                 r="6"
-                fill="#4f6df5"
+                style="fill: var(--accent-1)"
                 class="node-pulse"
               />
               <circle
@@ -280,7 +226,7 @@
                 cy="100"
                 r="14"
                 fill="none"
-                stroke="#4f6df5"
+                style="stroke: var(--accent-1)"
                 stroke-width="0.5"
                 opacity="0.3"
               />
@@ -288,16 +234,15 @@
                 cx="120"
                 cy="200"
                 r="5"
-                fill="#8b5cf6"
                 class="node-pulse"
-                style="animation-delay: -1s"
+                style="animation-delay: -1s; fill: var(--accent-2)"
               />
               <circle
                 cx="120"
                 cy="200"
                 r="12"
                 fill="none"
-                stroke="#8b5cf6"
+                style="stroke: var(--accent-2)"
                 stroke-width="0.5"
                 opacity="0.3"
               />
@@ -305,16 +250,15 @@
                 cx="280"
                 cy="180"
                 r="5"
-                fill="#4f6df5"
+                style="fill: var(--accent-1); animation-delay: -2s"
                 class="node-pulse"
-                style="animation-delay: -2s"
               />
               <circle
                 cx="280"
                 cy="180"
                 r="12"
                 fill="none"
-                stroke="#4f6df5"
+                style="stroke: var(--accent-1)"
                 stroke-width="0.5"
                 opacity="0.3"
               />
@@ -322,16 +266,15 @@
                 cx="200"
                 cy="300"
                 r="7"
-                fill="#8b5cf6"
+                style="fill: var(--accent-2); animation-delay: -0.5s"
                 class="node-pulse"
-                style="animation-delay: -0.5s"
               />
               <circle
                 cx="200"
                 cy="300"
                 r="16"
                 fill="none"
-                stroke="#8b5cf6"
+                style="stroke: var(--accent-2)"
                 stroke-width="0.5"
                 opacity="0.3"
               />
@@ -339,36 +282,32 @@
                 cx="340"
                 cy="260"
                 r="3"
-                fill="#4f6df5"
+                style="fill: var(--accent-1); animation-delay: -3s"
                 class="node-pulse"
-                style="animation-delay: -3s"
                 opacity="0.6"
               />
               <circle
                 cx="60"
                 cy="280"
                 r="3"
-                fill="#8b5cf6"
+                style="fill: var(--accent-2); animation-delay: -1.5s"
                 class="node-pulse"
-                style="animation-delay: -1.5s"
                 opacity="0.6"
               />
               <circle
                 cx="140"
                 cy="350"
                 r="3"
-                fill="#4f6df5"
+                style="fill: var(--accent-1); animation-delay: -2.5s"
                 class="node-pulse"
-                style="animation-delay: -2.5s"
                 opacity="0.5"
               />
               <circle
                 cx="270"
                 cy="350"
                 r="3"
-                fill="#8b5cf6"
+                style="fill: var(--accent-2); animation-delay: -3.5s"
                 class="node-pulse"
-                style="animation-delay: -3.5s"
                 opacity="0.5"
               />
               <!-- Center AI icon area -->
@@ -376,7 +315,7 @@
                 cx="200"
                 cy="200"
                 r="24"
-                fill="rgba(13,13,26,0.9)"
+                style="fill: rgba(var(--surface-rgb), 0.9)"
                 stroke="url(#grad1)"
                 stroke-width="1.5"
               />
@@ -384,7 +323,7 @@
                 x="200"
                 y="207"
                 text-anchor="middle"
-                fill="#a0b4ff"
+                style="fill: var(--accent-light-1)"
                 font-size="18"
                 font-family="'Space Mono', monospace"
               >
@@ -392,15 +331,15 @@
               </text>
               <defs>
                 <lineargradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#4f6df5" />
-                  <stop offset="100%" stop-color="#8b5cf6" />
+                  <stop offset="0%" style="stop-color: var(--accent-1)" />
+                  <stop offset="100%" style="stop-color: var(--accent-2)" />
                 </lineargradient>
                 <lineargradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
-                  <stop offset="0%" stop-color="#8b5cf6" />
-                  <stop offset="100%" stop-color="#4f6df5" />
+                  <stop offset="0%" style="stop-color: var(--accent-2)" />
+                  <stop offset="100%" style="stop-color: var(--accent-1)" />
                 </lineargradient>
                 <radialgradient id="radialGlow">
-                  <stop offset="0%" stop-color="#4f6df5" />
+                  <stop offset="0%" style="stop-color: var(--accent-1)" />
                   <stop offset="100%" stop-color="transparent" />
                 </radialgradient>
               </defs>
@@ -415,14 +354,14 @@
           <div class="text-center mb-16 reveal">
             <p
               class="font-mono-accent text-xs tracking-widest mb-4"
-              style="color: #8b5cf6"
+              style="color: var(--accent-2)"
             >
               THE PROBLEM
             </p>
             <h2
               id="problem-headline"
               class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
-              style="color: #f0f1f7"
+              style="color: var(--text-heading)"
             >
               You're Losing Time on Work<br />
               That Should Be Automated
@@ -432,19 +371,19 @@
             <div class="glass-card rounded-2xl p-8 reveal stagger-1">
               <div
                 class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                style="background: rgba(79, 109, 245, 0.1)"
+                style="background: rgba(var(--accent-1-rgb), 0.1)"
               >
                 <i
                   data-lucide="clipboard-list"
-                  style="width: 22px; height: 22px; color: #4f6df5"
+                  style="width: 22px; height: 22px; color: var(--accent-1)"
                 ></i>
               </div>
-              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
                 Manual Data Entry
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Hours spent copying data between spreadsheets, tools, and
                 systems that should talk to each other.
@@ -453,19 +392,19 @@
             <div class="glass-card rounded-2xl p-8 reveal stagger-2">
               <div
                 class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                style="background: rgba(139, 92, 246, 0.1)"
+                style="background: rgba(var(--accent-2-rgb), 0.1)"
               >
                 <i
                   data-lucide="repeat"
-                  style="width: 22px; height: 22px; color: #8b5cf6"
+                  style="width: 22px; height: 22px; color: var(--accent-2)"
                 ></i>
               </div>
-              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
                 Repetitive Admin Tasks
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Your team wastes talent on tasks a well-designed system could
                 handle in seconds.
@@ -474,19 +413,19 @@
             <div class="glass-card rounded-2xl p-8 reveal stagger-3">
               <div
                 class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                style="background: rgba(79, 109, 245, 0.1)"
+                style="background: rgba(var(--accent-1-rgb), 0.1)"
               >
                 <i
                   data-lucide="unplug"
-                  style="width: 22px; height: 22px; color: #4f6df5"
+                  style="width: 22px; height: 22px; color: var(--accent-1)"
                 ></i>
               </div>
-              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
                 Disconnected Systems
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Your CRM doesn't talk to your invoicing. Your forms don't feed
                 your database. Chaos.
@@ -495,19 +434,19 @@
             <div class="glass-card rounded-2xl p-8 reveal stagger-4">
               <div
                 class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
-                style="background: rgba(139, 92, 246, 0.1)"
+                style="background: rgba(var(--accent-2-rgb), 0.1)"
               >
                 <i
                   data-lucide="clock"
-                  style="width: 22px; height: 22px; color: #8b5cf6"
+                  style="width: 22px; height: 22px; color: var(--accent-2)"
                 ></i>
               </div>
-              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
                 Missed Opportunities
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Slow response times and bottlenecks cost you leads, revenue, and
                 competitive edge.
@@ -523,21 +462,21 @@
           <div class="text-center mb-16 reveal">
             <p
               class="font-mono-accent text-xs tracking-widest mb-4"
-              style="color: #4f6df5"
+              style="color: var(--accent-1)"
             >
               THE SOLUTION
             </p>
             <h2
               id="solution-headline"
               class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
-              style="color: #f0f1f7"
+              style="color: var(--text-heading)"
             >
               We Build Intelligent<br />
               Automation Systems
             </h2>
             <p
               class="mt-6 text-lg max-w-2xl mx-auto"
-              style="color: rgba(226, 228, 240, 0.5)"
+              style="color: rgba(var(--text-rgb), 0.5)"
             >
               By combining AI agents, n8n workflows, and custom backend
               architecture, we create systems that think, act, and scale — so
@@ -554,22 +493,22 @@
                 style="
                   background: linear-gradient(
                     135deg,
-                    rgba(79, 109, 245, 0.15),
-                    rgba(79, 109, 245, 0.05)
+                    rgba(var(--accent-1-rgb), 0.15),
+                    rgba(var(--accent-1-rgb), 0.05)
                   );
                 "
               >
                 <i
                   data-lucide="brain"
-                  style="width: 28px; height: 28px; color: #4f6df5"
+                  style="width: 28px; height: 28px; color: var(--accent-1)"
                 ></i>
               </div>
-              <h3 class="font-bold text-xl mb-3" style="color: #e2e4f0">
+              <h3 class="font-bold text-xl mb-3" style="color: var(--text-primary)">
                 AI Agents
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Decision-making automation that understands context, processes
                 data, and acts intelligently.
@@ -583,22 +522,22 @@
                 style="
                   background: linear-gradient(
                     135deg,
-                    rgba(139, 92, 246, 0.15),
-                    rgba(139, 92, 246, 0.05)
+                    rgba(var(--accent-2-rgb), 0.15),
+                    rgba(var(--accent-2-rgb), 0.05)
                   );
                 "
               >
                 <i
                   data-lucide="git-branch"
-                  style="width: 28px; height: 28px; color: #8b5cf6"
+                  style="width: 28px; height: 28px; color: var(--accent-2)"
                 ></i>
               </div>
-              <h3 class="font-bold text-xl mb-3" style="color: #e2e4f0">
+              <h3 class="font-bold text-xl mb-3" style="color: var(--text-primary)">
                 n8n Workflows
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Visual process automation that connects your tools, triggers
                 actions, and runs 24/7 without you.
@@ -612,22 +551,22 @@
                 style="
                   background: linear-gradient(
                     135deg,
-                    rgba(79, 109, 245, 0.1),
-                    rgba(139, 92, 246, 0.1)
+                    rgba(var(--accent-1-rgb), 0.1),
+                    rgba(var(--accent-2-rgb), 0.1)
                   );
                 "
               >
                 <i
                   data-lucide="server"
-                  style="width: 28px; height: 28px; color: #a07aff"
+                  style="width: 28px; height: 28px; color: var(--accent-blend)"
                 ></i>
               </div>
-              <h3 class="font-bold text-xl mb-3" style="color: #e2e4f0">
+              <h3 class="font-bold text-xl mb-3" style="color: var(--text-primary)">
                 Custom Systems
               </h3>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Scalable backend architecture built to handle your unique
                 business logic and data flows.
@@ -644,21 +583,21 @@
                   <div
                     class="w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3"
                     style="
-                      background: rgba(79, 109, 245, 0.12);
-                      border: 1px solid rgba(79, 109, 245, 0.3);
+                      background: rgba(var(--accent-1-rgb), 0.12);
+                      border: 1px solid rgba(var(--accent-1-rgb), 0.3);
                     "
                   >
                     <i
                       data-lucide="play"
-                      style="width: 20px; height: 20px; color: #4f6df5"
+                      style="width: 20px; height: 20px; color: var(--accent-1)"
                     ></i>
                   </div>
-                  <p class="font-semibold text-sm" style="color: #e2e4f0">
+                  <p class="font-semibold text-sm" style="color: var(--text-primary)">
                     Trigger
                   </p>
                   <p
                     class="text-xs mt-1"
-                    style="color: rgba(226, 228, 240, 0.35)"
+                    style="color: rgba(var(--text-rgb), 0.35)"
                   >
                     Event detected
                   </p>
@@ -668,7 +607,7 @@
                   style="
                     width: 60px;
                     height: 2px;
-                    background: linear-gradient(90deg, #4f6df5, #8b5cf6);
+                    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
                   "
                 ></div>
                 <i
@@ -677,28 +616,28 @@
                   style="
                     width: 20px;
                     height: 20px;
-                    color: rgba(79, 109, 245, 0.4);
+                    color: rgba(var(--accent-1-rgb), 0.4);
                   "
                 ></i>
                 <div class="flow-step text-center flex-1">
                   <div
                     class="w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3"
                     style="
-                      background: rgba(139, 92, 246, 0.12);
-                      border: 1px solid rgba(139, 92, 246, 0.3);
+                      background: rgba(var(--accent-2-rgb), 0.12);
+                      border: 1px solid rgba(var(--accent-2-rgb), 0.3);
                     "
                   >
                     <i
                       data-lucide="brain"
-                      style="width: 20px; height: 20px; color: #8b5cf6"
+                      style="width: 20px; height: 20px; color: var(--accent-2)"
                     ></i>
                   </div>
-                  <p class="font-semibold text-sm" style="color: #e2e4f0">
+                  <p class="font-semibold text-sm" style="color: var(--text-primary)">
                     AI Decision
                   </p>
                   <p
                     class="text-xs mt-1"
-                    style="color: rgba(226, 228, 240, 0.35)"
+                    style="color: rgba(var(--text-rgb), 0.35)"
                   >
                     Analyzes &amp; decides
                   </p>
@@ -708,7 +647,7 @@
                   style="
                     width: 60px;
                     height: 2px;
-                    background: linear-gradient(90deg, #8b5cf6, #4f6df5);
+                    background: linear-gradient(90deg, var(--accent-2), var(--accent-1));
                   "
                 ></div>
                 <i
@@ -717,28 +656,28 @@
                   style="
                     width: 20px;
                     height: 20px;
-                    color: rgba(139, 92, 246, 0.4);
+                    color: rgba(var(--accent-2-rgb), 0.4);
                   "
                 ></i>
                 <div class="flow-step text-center flex-1">
                   <div
                     class="w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3"
                     style="
-                      background: rgba(79, 109, 245, 0.12);
-                      border: 1px solid rgba(79, 109, 245, 0.3);
+                      background: rgba(var(--accent-1-rgb), 0.12);
+                      border: 1px solid rgba(var(--accent-1-rgb), 0.3);
                     "
                   >
                     <i
                       data-lucide="cog"
-                      style="width: 20px; height: 20px; color: #4f6df5"
+                      style="width: 20px; height: 20px; color: var(--accent-1)"
                     ></i>
                   </div>
-                  <p class="font-semibold text-sm" style="color: #e2e4f0">
+                  <p class="font-semibold text-sm" style="color: var(--text-primary)">
                     Auto Action
                   </p>
                   <p
                     class="text-xs mt-1"
-                    style="color: rgba(226, 228, 240, 0.35)"
+                    style="color: rgba(var(--text-rgb), 0.35)"
                   >
                     Executes the task
                   </p>
@@ -748,7 +687,7 @@
                   style="
                     width: 60px;
                     height: 2px;
-                    background: linear-gradient(90deg, #4f6df5, #8b5cf6);
+                    background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
                   "
                 ></div>
                 <i
@@ -757,7 +696,7 @@
                   style="
                     width: 20px;
                     height: 20px;
-                    color: rgba(79, 109, 245, 0.4);
+                    color: rgba(var(--accent-1-rgb), 0.4);
                   "
                 ></i>
                 <div class="flow-step text-center flex-1">
@@ -766,23 +705,23 @@
                     style="
                       background: linear-gradient(
                         135deg,
-                        rgba(79, 109, 245, 0.15),
-                        rgba(139, 92, 246, 0.15)
+                        rgba(var(--accent-1-rgb), 0.15),
+                        rgba(var(--accent-2-rgb), 0.15)
                       );
-                      border: 1px solid rgba(139, 92, 246, 0.3);
+                      border: 1px solid rgba(var(--accent-2-rgb), 0.3);
                     "
                   >
                     <i
                       data-lucide="check-circle"
-                      style="width: 20px; height: 20px; color: #a07aff"
+                      style="width: 20px; height: 20px; color: var(--accent-blend)"
                     ></i>
                   </div>
-                  <p class="font-semibold text-sm" style="color: #e2e4f0">
+                  <p class="font-semibold text-sm" style="color: var(--text-primary)">
                     Result
                   </p>
                   <p
                     class="text-xs mt-1"
-                    style="color: rgba(226, 228, 240, 0.35)"
+                    style="color: rgba(var(--text-rgb), 0.35)"
                   >
                     Done. Logged. Reported.
                   </p>
@@ -799,13 +738,13 @@
           <div class="text-center mb-16 reveal">
             <p
               class="font-mono-accent text-xs tracking-widest mb-4"
-              style="color: #8b5cf6"
+              style="color: var(--accent-2)"
             >
               WHAT WE BUILD
             </p>
             <h2
               class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
-              style="color: #f0f1f7"
+              style="color: var(--text-heading)"
             >
               Services
             </h2>
@@ -815,20 +754,20 @@
               <div class="flex items-center gap-3 mb-4">
                 <div
                   class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background: rgba(79, 109, 245, 0.1)"
+                  style="background: rgba(var(--accent-1-rgb), 0.1)"
                 >
                   <i
                     data-lucide="bot"
-                    style="width: 20px; height: 20px; color: #4f6df5"
+                    style="width: 20px; height: 20px; color: var(--accent-1)"
                   ></i>
                 </div>
-                <h3 class="font-bold" style="color: #e2e4f0">
+                <h3 class="font-bold" style="color: var(--text-primary)">
                   AI-Powered Automation
                 </h3>
               </div>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Deploy AI agents that handle customer inquiries, classify data,
                 and make decisions faster than any human team.
@@ -838,20 +777,20 @@
               <div class="flex items-center gap-3 mb-4">
                 <div
                   class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background: rgba(139, 92, 246, 0.1)"
+                  style="background: rgba(var(--accent-2-rgb), 0.1)"
                 >
                   <i
                     data-lucide="layout-dashboard"
-                    style="width: 20px; height: 20px; color: #8b5cf6"
+                    style="width: 20px; height: 20px; color: var(--accent-2)"
                   ></i>
                 </div>
-                <h3 class="font-bold" style="color: #e2e4f0">
+                <h3 class="font-bold" style="color: var(--text-primary)">
                   Custom CRM &amp; Tools
                 </h3>
               </div>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Internal tools tailored to your operations — not bloated SaaS.
                 Track leads, manage projects, and run reports your way.
@@ -861,20 +800,20 @@
               <div class="flex items-center gap-3 mb-4">
                 <div
                   class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background: rgba(79, 109, 245, 0.1)"
+                  style="background: rgba(var(--accent-1-rgb), 0.1)"
                 >
                   <i
                     data-lucide="truck"
-                    style="width: 20px; height: 20px; color: #4f6df5"
+                    style="width: 20px; height: 20px; color: var(--accent-1)"
                   ></i>
                 </div>
-                <h3 class="font-bold" style="color: #e2e4f0">
+                <h3 class="font-bold" style="color: var(--text-primary)">
                   Logistics &amp; Inventory
                 </h3>
               </div>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Automated stock tracking, order fulfillment triggers, and
                 real-time supply chain visibility across your operations.
@@ -884,20 +823,20 @@
               <div class="flex items-center gap-3 mb-4">
                 <div
                   class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background: rgba(139, 92, 246, 0.1)"
+                  style="background: rgba(var(--accent-2-rgb), 0.1)"
                 >
                   <i
                     data-lucide="workflow"
-                    style="width: 20px; height: 20px; color: #8b5cf6"
+                    style="width: 20px; height: 20px; color: var(--accent-2)"
                   ></i>
                 </div>
-                <h3 class="font-bold" style="color: #e2e4f0">
+                <h3 class="font-bold" style="color: var(--text-primary)">
                   Workflow Automation
                 </h3>
               </div>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 n8n-powered workflows that connect your apps, automate
                 processes, and eliminate manual handoffs entirely.
@@ -907,20 +846,20 @@
               <div class="flex items-center gap-3 mb-4">
                 <div
                   class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background: rgba(79, 109, 245, 0.1)"
+                  style="background: rgba(var(--accent-1-rgb), 0.1)"
                 >
                   <i
                     data-lucide="plug"
-                    style="width: 20px; height: 20px; color: #4f6df5"
+                    style="width: 20px; height: 20px; color: var(--accent-1)"
                   ></i>
                 </div>
-                <h3 class="font-bold" style="color: #e2e4f0">
+                <h3 class="font-bold" style="color: var(--text-primary)">
                   API Integrations
                 </h3>
               </div>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Connect any platform — Stripe, Notion, Slack, Google, HubSpot —
                 into one unified, automated ecosystem.
@@ -930,20 +869,20 @@
               <div class="flex items-center gap-3 mb-4">
                 <div
                   class="w-10 h-10 rounded-lg flex items-center justify-center"
-                  style="background: rgba(139, 92, 246, 0.1)"
+                  style="background: rgba(var(--accent-2-rgb), 0.1)"
                 >
                   <i
                     data-lucide="bell-ring"
-                    style="width: 20px; height: 20px; color: #8b5cf6"
+                    style="width: 20px; height: 20px; color: var(--accent-2)"
                   ></i>
                 </div>
-                <h3 class="font-bold" style="color: #e2e4f0">
+                <h3 class="font-bold" style="color: var(--text-primary)">
                   Real-time Monitoring
                 </h3>
               </div>
               <p
                 class="text-sm leading-relaxed"
-                style="color: rgba(226, 228, 240, 0.45)"
+                style="color: rgba(var(--text-rgb), 0.45)"
               >
                 Instant alerts, live dashboards, and automated reporting so you
                 always know what's happening in your business.
@@ -959,13 +898,13 @@
           <div class="text-center mb-16 reveal">
             <p
               class="font-mono-accent text-xs tracking-widest mb-4"
-              style="color: #4f6df5"
+              style="color: var(--accent-1)"
             >
               THE PROCESS
             </p>
             <h2
               class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
-              style="color: #f0f1f7"
+              style="color: var(--text-heading)"
             >
               How It Works
             </h2>
@@ -984,28 +923,28 @@
                   style="
                     background: linear-gradient(
                       135deg,
-                      rgba(13, 13, 26, 0.95),
-                      rgba(20, 20, 40, 0.95)
+                      rgba(var(--surface-rgb), 0.95),
+                      rgba(var(--surface-alt-rgb), 0.95)
                     );
-                    border: 1px solid rgba(79, 109, 245, 0.3);
+                    border: 1px solid rgba(var(--accent-1-rgb), 0.3);
                   "
                 >
                   <div>
                     <span
                       class="font-mono-accent text-xs block mb-1"
-                      style="color: rgba(79, 109, 245, 0.6)"
+                      style="color: rgba(var(--accent-1-rgb), 0.6)"
                       >01</span
                     >
                     <i
                       data-lucide="search"
-                      style="width: 28px; height: 28px; color: #4f6df5"
+                      style="width: 28px; height: 28px; color: var(--accent-1)"
                     ></i>
                   </div>
                 </div>
-                <h3 class="font-bold text-lg mt-6 mb-2" style="color: #e2e4f0">
+                <h3 class="font-bold text-lg mt-6 mb-2" style="color: var(--text-primary)">
                   Audit Your Business
                 </h3>
-                <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                <p class="text-sm" style="color: rgba(var(--text-rgb), 0.45)">
                   We map your workflows, identify bottlenecks, and find the
                   highest-impact automation opportunities.
                 </p>
@@ -1016,28 +955,28 @@
                   style="
                     background: linear-gradient(
                       135deg,
-                      rgba(13, 13, 26, 0.95),
-                      rgba(20, 20, 40, 0.95)
+                      rgba(var(--surface-rgb), 0.95),
+                      rgba(var(--surface-alt-rgb), 0.95)
                     );
-                    border: 1px solid rgba(139, 92, 246, 0.3);
+                    border: 1px solid rgba(var(--accent-2-rgb), 0.3);
                   "
                 >
                   <div>
                     <span
                       class="font-mono-accent text-xs block mb-1"
-                      style="color: rgba(139, 92, 246, 0.6)"
+                      style="color: rgba(var(--accent-2-rgb), 0.6)"
                       >02</span
                     >
                     <i
                       data-lucide="pen-tool"
-                      style="width: 28px; height: 28px; color: #8b5cf6"
+                      style="width: 28px; height: 28px; color: var(--accent-2)"
                     ></i>
                   </div>
                 </div>
-                <h3 class="font-bold text-lg mt-6 mb-2" style="color: #e2e4f0">
+                <h3 class="font-bold text-lg mt-6 mb-2" style="color: var(--text-primary)">
                   Design Automation System
                 </h3>
-                <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                <p class="text-sm" style="color: rgba(var(--text-rgb), 0.45)">
                   We architect a custom solution combining AI agents, workflows,
                   and integrations tailored to you.
                 </p>
@@ -1048,31 +987,31 @@
                   style="
                     background: linear-gradient(
                       135deg,
-                      rgba(13, 13, 26, 0.95),
-                      rgba(20, 20, 40, 0.95)
+                      rgba(var(--surface-rgb), 0.95),
+                      rgba(var(--surface-alt-rgb), 0.95)
                     );
-                    border: 1px solid rgba(79, 109, 245, 0.2);
+                    border: 1px solid rgba(var(--accent-1-rgb), 0.2);
                     box-shadow:
-                      0 0 40px rgba(79, 109, 245, 0.1),
-                      0 0 40px rgba(139, 92, 246, 0.1);
+                      0 0 40px rgba(var(--accent-1-rgb), 0.1),
+                      0 0 40px rgba(var(--accent-2-rgb), 0.1);
                   "
                 >
                   <div>
                     <span
                       class="font-mono-accent text-xs block mb-1"
-                      style="color: rgba(160, 122, 255, 0.6)"
+                      style="color: var(--accent-blend); opacity: 0.6"
                       >03</span
                     >
                     <i
                       data-lucide="rocket"
-                      style="width: 28px; height: 28px; color: #a07aff"
+                      style="width: 28px; height: 28px; color: var(--accent-blend)"
                     ></i>
                   </div>
                 </div>
-                <h3 class="font-bold text-lg mt-6 mb-2" style="color: #e2e4f0">
+                <h3 class="font-bold text-lg mt-6 mb-2" style="color: var(--text-primary)">
                   Deploy &amp; Scale
                 </h3>
-                <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                <p class="text-sm" style="color: rgba(var(--text-rgb), 0.45)">
                   We build, test, and launch your system — then optimize it as
                   your business grows.
                 </p>
@@ -1089,13 +1028,13 @@
             <div class="flex-1 reveal">
               <p
                 class="font-mono-accent text-xs tracking-widest mb-4"
-                style="color: #8b5cf6"
+                style="color: var(--accent-2)"
               >
                 THE RESULTS
               </p>
               <h2
                 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-8"
-                style="color: #f0f1f7"
+                style="color: var(--text-heading)"
               >
                 What You Gain
               </h2>
@@ -1103,18 +1042,18 @@
                 <div class="flex items-start gap-4">
                   <div
                     class="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5"
-                    style="background: rgba(79, 109, 245, 0.1)"
+                    style="background: rgba(var(--accent-1-rgb), 0.1)"
                   >
                     <i
                       data-lucide="timer"
-                      style="width: 20px; height: 20px; color: #4f6df5"
+                      style="width: 20px; height: 20px; color: var(--accent-1)"
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
                       Save Hundreds of Hours Monthly
                     </h3>
-                    <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                    <p class="text-sm" style="color: rgba(var(--text-rgb), 0.45)">
                       Reclaim the time your team spends on repetitive manual
                       work and redirect it to growth.
                     </p>
@@ -1123,18 +1062,18 @@
                 <div class="flex items-start gap-4">
                   <div
                     class="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5"
-                    style="background: rgba(139, 92, 246, 0.1)"
+                    style="background: rgba(var(--accent-2-rgb), 0.1)"
                   >
                     <i
                       data-lucide="trending-down"
-                      style="width: 20px; height: 20px; color: #8b5cf6"
+                      style="width: 20px; height: 20px; color: var(--accent-2)"
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
                       Reduce Operational Costs
                     </h3>
-                    <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                    <p class="text-sm" style="color: rgba(var(--text-rgb), 0.45)">
                       Automation does in seconds what used to take a full-time
                       employee hours. The math is simple.
                     </p>
@@ -1143,18 +1082,18 @@
                 <div class="flex items-start gap-4">
                   <div
                     class="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5"
-                    style="background: rgba(79, 109, 245, 0.1)"
+                    style="background: rgba(var(--accent-1-rgb), 0.1)"
                   >
                     <i
                       data-lucide="shield-check"
-                      style="width: 20px; height: 20px; color: #4f6df5"
+                      style="width: 20px; height: 20px; color: var(--accent-1)"
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
                       Eliminate Human Errors
                     </h3>
-                    <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                    <p class="text-sm" style="color: rgba(var(--text-rgb), 0.45)">
                       Systems don't get tired, distracted, or make typos. Your
                       data stays clean and reliable.
                     </p>
@@ -1163,18 +1102,18 @@
                 <div class="flex items-start gap-4">
                   <div
                     class="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5"
-                    style="background: rgba(139, 92, 246, 0.1)"
+                    style="background: rgba(var(--accent-2-rgb), 0.1)"
                   >
                     <i
                       data-lucide="arrow-up-right"
-                      style="width: 20px; height: 20px; color: #8b5cf6"
+                      style="width: 20px; height: 20px; color: var(--accent-2)"
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
                       Scale Without Hiring
                     </h3>
-                    <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                    <p class="text-sm" style="color: rgba(var(--text-rgb), 0.45)">
                       Handle 10x the volume without 10x the team. Automation
                       scales with your business, not your payroll.
                     </p>
@@ -1189,7 +1128,7 @@
                   <p
                     class="text-4xl font-extrabold"
                     style="
-                      background: linear-gradient(135deg, #4f6df5, #8b5cf6);
+                      background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
                       -webkit-background-clip: text;
                       -webkit-text-fill-color: transparent;
                     "
@@ -1198,7 +1137,7 @@
                   </p>
                   <p
                     class="text-xs mt-2 font-mono-accent"
-                    style="color: rgba(226, 228, 240, 0.4)"
+                    style="color: rgba(var(--text-rgb), 0.4)"
                   >
                     LESS MANUAL WORK
                   </p>
@@ -1207,7 +1146,7 @@
                   <p
                     class="text-4xl font-extrabold"
                     style="
-                      background: linear-gradient(135deg, #8b5cf6, #c084fc);
+                      background: linear-gradient(135deg, var(--accent-2), var(--accent-3));
                       -webkit-background-clip: text;
                       -webkit-text-fill-color: transparent;
                     "
@@ -1216,7 +1155,7 @@
                   </p>
                   <p
                     class="text-xs mt-2 font-mono-accent"
-                    style="color: rgba(226, 228, 240, 0.4)"
+                    style="color: rgba(var(--text-rgb), 0.4)"
                   >
                     FASTER OPERATIONS
                   </p>
@@ -1225,7 +1164,7 @@
                   <p
                     class="text-4xl font-extrabold"
                     style="
-                      background: linear-gradient(135deg, #4f6df5, #a07aff);
+                      background: linear-gradient(135deg, var(--accent-1), var(--accent-blend));
                       -webkit-background-clip: text;
                       -webkit-text-fill-color: transparent;
                     "
@@ -1234,7 +1173,7 @@
                   </p>
                   <p
                     class="text-xs mt-2 font-mono-accent"
-                    style="color: rgba(226, 228, 240, 0.4)"
+                    style="color: rgba(var(--text-rgb), 0.4)"
                   >
                     HOURS SAVED / MONTH
                   </p>
@@ -1243,7 +1182,7 @@
                   <p
                     class="text-4xl font-extrabold"
                     style="
-                      background: linear-gradient(135deg, #8b5cf6, #4f6df5);
+                      background: linear-gradient(135deg, var(--accent-2), var(--accent-1));
                       -webkit-background-clip: text;
                       -webkit-text-fill-color: transparent;
                     "
@@ -1252,7 +1191,7 @@
                   </p>
                   <p
                     class="text-xs mt-2 font-mono-accent"
-                    style="color: rgba(226, 228, 240, 0.4)"
+                    style="color: rgba(var(--text-rgb), 0.4)"
                   >
                     ALWAYS RUNNING
                   </p>
@@ -1274,17 +1213,17 @@
               style="
                 width: 36px;
                 height: 36px;
-                color: rgba(139, 92, 246, 0.3);
+                color: rgba(var(--accent-2-rgb), 0.3);
                 margin: 0 auto 20px;
                 display: block;
               "
             ></i>
             <p
               class="text-xl sm:text-2xl font-medium leading-relaxed mb-8"
-              style="color: #e2e4f0"
+              style="color: var(--text-primary)"
             >
               "Reduced manual workload by
-              <span style="color: #8b5cf6">70%</span> for our logistics
+              <span style="color: var(--accent-2)">70%</span> for our logistics
               operations using automated workflows. What used to take our team 4
               hours daily now runs in the background — zero human input."
             </p>
@@ -1292,17 +1231,17 @@
               <div
                 class="w-12 h-12 rounded-full flex items-center justify-center font-bold"
                 style="
-                  background: linear-gradient(135deg, #4f6df5, #8b5cf6);
+                  background: linear-gradient(135deg, var(--accent-1), var(--accent-2));
                   color: #fff;
                 "
               >
                 MK
               </div>
               <div class="text-left">
-                <p class="font-semibold text-sm" style="color: #e2e4f0">
+                <p class="font-semibold text-sm" style="color: var(--text-primary)">
                   Marcus Klein
                 </p>
-                <p class="text-xs" style="color: rgba(226, 228, 240, 0.4)">
+                <p class="text-xs" style="color: rgba(var(--text-rgb), 0.4)">
                   Operations Director, NovaTrans Logistics
                 </p>
               </div>
@@ -1318,7 +1257,7 @@
           style="
             width: 600px;
             height: 600px;
-            background: rgba(79, 109, 245, 0.06);
+            background: rgba(var(--accent-1-rgb), 0.06);
             top: -200px;
             left: 50%;
             transform: translateX(-50%);
@@ -1327,19 +1266,19 @@
         <div class="max-w-3xl mx-auto px-6 text-center relative z-10 reveal">
           <p
             class="font-mono-accent text-xs tracking-widest mb-6"
-            style="color: #4f6df5"
+            style="color: var(--accent-1)"
           >
             READY?
           </p>
           <h2
             id="final-cta-headline"
             class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
-            style="color: #f0f1f7"
+            style="color: var(--text-heading)"
           >
             Stop Doing Manual Work.<br />
             Start Scaling Smarter.
           </h2>
-          <p class="text-lg mb-10" style="color: rgba(226, 228, 240, 0.5)">
+          <p class="text-lg mb-10" style="color: rgba(var(--text-rgb), 0.5)">
             Let's map your business processes and show you exactly where
             automation will save you time, money, and sanity.
           </p>
@@ -1352,74 +1291,13 @@
           <p
             id="urgency-text"
             class="mt-6 text-sm font-mono-accent"
-            style="color: rgba(139, 92, 246, 0.6)"
+            style="color: rgba(var(--accent-2-rgb), 0.6)"
           >
             ⚡ Limited onboarding slots available
           </p>
         </div>
       </section>
-      <!-- FOOTER -->
-      <footer
-        class="w-full py-12"
-        style="border-top: 1px solid rgba(79, 109, 245, 0.08)"
-      >
-        <div class="max-w-7xl mx-auto px-6">
-          <div
-            class="flex flex-col md:flex-row items-center justify-between gap-6"
-          >
-            <div class="flex items-center gap-2">
-              <div
-                class="w-7 h-7 rounded-md flex items-center justify-center"
-                style="background: linear-gradient(135deg, #4f6df5, #8b5cf6)"
-              >
-                <i
-                  data-lucide="zap"
-                  style="width: 14px; height: 14px; color: #fff"
-                ></i>
-              </div>
-              <span
-                class="font-mono-accent font-bold text-sm"
-                style="color: rgba(226, 228, 240, 0.6)"
-                >VibeCheck Automation Platform</span
-              >
-            </div>
-            <div class="flex items-center gap-6">
-              <a
-                href="#"
-                onclick="event.preventDefault()"
-                style="color: rgba(226, 228, 240, 0.3)"
-                class="hover:text-white transition-colors"
-                ><i data-lucide="twitter" style="width: 18px; height: 18px"></i
-              ></a>
-              <a
-                href="#"
-                onclick="event.preventDefault()"
-                style="color: rgba(226, 228, 240, 0.3)"
-                class="hover:text-white transition-colors"
-                ><i data-lucide="linkedin" style="width: 18px; height: 18px"></i
-              ></a>
-              <a
-                href="#"
-                onclick="event.preventDefault()"
-                style="color: rgba(226, 228, 240, 0.3)"
-                class="hover:text-white transition-colors"
-                ><i data-lucide="github" style="width: 18px; height: 18px"></i
-              ></a>
-              <a
-                href="#"
-                onclick="event.preventDefault()"
-                style="color: rgba(226, 228, 240, 0.3)"
-                class="hover:text-white transition-colors"
-                ><i data-lucide="mail" style="width: 18px; height: 18px"></i
-              ></a>
-            </div>
-            <p class="text-xs" style="color: rgba(226, 228, 240, 0.25)">
-              © <span id="current-year"></span> VibeCheck Automation Platform.
-              All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <div id="footer-placeholder"></div>
     </div>
     <script src="js/main.js"></script>
     <script>
