@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - NEXFLOW</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body class="h-full">
+    <div
+      id="app-wrapper"
+      class="w-full h-full overflow-auto grid-bg"
+      style="background-color: var(--bg-primary)"
+    >
+      <!-- NAV -->
+      <nav
+        class="fixed top-0 left-0 w-full z-50"
+        style="
+          background: rgba(6, 6, 14, 0.8);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(79, 109, 245, 0.08);
+        "
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+        >
+          <a href="index.html" class="flex items-center gap-2">
+            <div
+              class="w-8 h-8 rounded-lg flex items-center justify-center"
+              style="background: linear-gradient(135deg, #4f6df5, #8b5cf6)"
+            >
+              <i
+                data-lucide="zap"
+                style="width: 18px; height: 18px; color: #fff"
+              ></i>
+            </div>
+            <span
+              class="font-mono-accent font-bold text-lg tracking-tight"
+              style="color: #e2e4f0"
+              >NEXFLOW</span
+            >
+          </a>
+          <div
+            class="hidden md:flex items-center gap-8 text-sm"
+            style="color: rgba(226, 228, 240, 0.5)"
+          >
+            <a href="index.html#problems" class="hover:text-white transition-colors"
+              >Problems</a
+            >
+            <a href="index.html#services" class="hover:text-white transition-colors"
+              >Services</a
+            >
+            <a href="index.html#process" class="hover:text-white transition-colors"
+              >Process</a
+            >
+            <a href="index.html#results" class="hover:text-white transition-colors"
+              >Results</a
+            >
+            <a href="contact.html" class="text-white transition-colors"
+              >Contact</a
+            >
+          </div>
+          <a
+            href="contact.html"
+            class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white cursor-pointer hidden sm:inline-block"
+            ><span>Get Started</span></a
+          >
+        </div>
+      </nav>
+
+      <!-- HERO HEADER -->
+      <section
+        class="relative w-full overflow-hidden"
+        style="padding-top: 140px; padding-bottom: 60px"
+      >
+        <div
+          class="hero-orb"
+          style="
+            width: 500px;
+            height: 500px;
+            background: rgba(79, 109, 245, 0.08);
+            top: -100px;
+            left: -150px;
+          "
+        ></div>
+        <div
+          class="hero-orb"
+          style="
+            width: 400px;
+            height: 400px;
+            background: rgba(139, 92, 246, 0.06);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -3s;
+          "
+        ></div>
+        <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+          <div
+            class="inline-block mb-6 px-4 py-1.5 rounded-full text-xs font-mono-accent tracking-widest"
+            style="
+              background: rgba(79, 109, 245, 0.08);
+              border: 1px solid rgba(79, 109, 245, 0.2);
+              color: #8ba0ff;
+            "
+          >
+            GET IN TOUCH
+          </div>
+          <h1
+            class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
+            style="color: #f0f1f7"
+          >
+            Let's Build Something<br />
+            <span
+              style="
+                background: linear-gradient(135deg, #4f6df5, #8b5cf6, #c084fc);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+              "
+              >Together</span
+            >
+          </h1>
+          <p
+            class="mt-6 text-lg leading-relaxed max-w-2xl mx-auto"
+            style="color: rgba(226, 228, 240, 0.55)"
+          >
+            Have a project in mind or want to explore how automation can
+            transform your business? We'd love to hear from you.
+          </p>
+        </div>
+      </section>
+
+      <div class="section-glow w-full"></div>
+
+      <!-- CONTACT SECTION -->
+      <section class="w-full py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col lg:flex-row gap-16">
+            <!-- Contact Info -->
+            <div class="flex-1 reveal">
+              <p
+                class="font-mono-accent text-xs tracking-widest mb-4"
+                style="color: #8b5cf6"
+              >
+                CONTACT INFO
+              </p>
+              <h2
+                class="text-3xl sm:text-4xl font-bold tracking-tight mb-8"
+                style="color: #f0f1f7"
+              >
+                Reach Out Anytime
+              </h2>
+              <p
+                class="text-base leading-relaxed mb-10"
+                style="color: rgba(226, 228, 240, 0.5)"
+              >
+                Whether you're ready to start a project or just exploring your
+                options, our team is here to help you find the right automation
+                solution.
+              </p>
+
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
+                    style="background: rgba(79, 109, 245, 0.1)"
+                  >
+                    <i
+                      data-lucide="mail"
+                      style="width: 22px; height: 22px; color: #4f6df5"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                      Email Us
+                    </h3>
+                    <p
+                      class="text-sm"
+                      style="color: rgba(226, 228, 240, 0.45)"
+                    >
+                      hello@nexflow.ai
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
+                    style="background: rgba(139, 92, 246, 0.1)"
+                  >
+                    <i
+                      data-lucide="phone"
+                      style="width: 22px; height: 22px; color: #8b5cf6"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                      Call Us
+                    </h3>
+                    <p
+                      class="text-sm"
+                      style="color: rgba(226, 228, 240, 0.45)"
+                    >
+                      +1 (555) 123-4567
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
+                    style="background: rgba(79, 109, 245, 0.1)"
+                  >
+                    <i
+                      data-lucide="map-pin"
+                      style="width: 22px; height: 22px; color: #4f6df5"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                      Location
+                    </h3>
+                    <p
+                      class="text-sm"
+                      style="color: rgba(226, 228, 240, 0.45)"
+                    >
+                      Remote-first, serving clients worldwide
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-12 h-12 rounded-xl flex-shrink-0 flex items-center justify-center"
+                    style="background: rgba(139, 92, 246, 0.1)"
+                  >
+                    <i
+                      data-lucide="clock"
+                      style="width: 22px; height: 22px; color: #8b5cf6"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                      Response Time
+                    </h3>
+                    <p
+                      class="text-sm"
+                      style="color: rgba(226, 228, 240, 0.45)"
+                    >
+                      We typically respond within 24 hours
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="flex-1 reveal stagger-2">
+              <div class="glass-card rounded-2xl p-8 sm:p-10">
+                <h3
+                  class="text-xl font-bold mb-6"
+                  style="color: #e2e4f0"
+                >
+                  Send Us a Message
+                </h3>
+                <form id="contact-form" class="space-y-5">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label
+                        for="name"
+                        class="block text-xs font-mono-accent tracking-wider mb-2"
+                        style="color: rgba(226, 228, 240, 0.4)"
+                        >NAME</label
+                      >
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        placeholder="John Doe"
+                        class="form-input w-full px-4 py-3 rounded-xl text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        for="email"
+                        class="block text-xs font-mono-accent tracking-wider mb-2"
+                        style="color: rgba(226, 228, 240, 0.4)"
+                        >EMAIL</label
+                      >
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="john@company.com"
+                        class="form-input w-full px-4 py-3 rounded-xl text-sm"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label
+                      for="subject"
+                      class="block text-xs font-mono-accent tracking-wider mb-2"
+                      style="color: rgba(226, 228, 240, 0.4)"
+                      >SUBJECT</label
+                    >
+                    <select
+                      id="subject"
+                      name="subject"
+                      required
+                      class="form-input w-full px-4 py-3 rounded-xl text-sm"
+                    >
+                      <option value="" disabled selected>Select a topic</option>
+                      <option value="automation-audit">Free Automation Audit</option>
+                      <option value="ai-agents">AI Agents</option>
+                      <option value="workflow-automation">Workflow Automation</option>
+                      <option value="api-integration">API Integrations</option>
+                      <option value="custom-project">Custom Project</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label
+                      for="message"
+                      class="block text-xs font-mono-accent tracking-wider mb-2"
+                      style="color: rgba(226, 228, 240, 0.4)"
+                      >MESSAGE</label
+                    >
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      required
+                      placeholder="Tell us about your project or the challenges you're facing..."
+                      class="form-input w-full px-4 py-3 rounded-xl text-sm resize-none"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn-primary w-full px-8 py-4 rounded-full font-semibold text-white cursor-pointer"
+                  >
+                    <span>Send Message</span>
+                  </button>
+                  <p
+                    class="text-center text-xs font-mono-accent"
+                    style="color: rgba(139, 92, 246, 0.5)"
+                  >
+                    We'll get back to you within 24 hours
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-glow w-full"></div>
+
+      <!-- FAQ SECTION -->
+      <section class="w-full py-24 relative">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="text-center mb-16 reveal">
+            <p
+              class="font-mono-accent text-xs tracking-widest mb-4"
+              style="color: #4f6df5"
+            >
+              FAQ
+            </p>
+            <h2
+              class="text-3xl sm:text-4xl font-bold tracking-tight"
+              style="color: #f0f1f7"
+            >
+              Common Questions
+            </h2>
+          </div>
+          <div class="space-y-4">
+            <div class="glass-card rounded-2xl p-6 reveal stagger-1">
+              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+                How long does it take to build an automation system?
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Most projects take 2-6 weeks from discovery to deployment,
+                depending on complexity. Simple workflows can be live in days.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-6 reveal stagger-2">
+              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+                What does the free automation audit include?
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                We'll map your current workflows, identify bottlenecks, and
+                provide a prioritized list of automation opportunities with
+                estimated ROI.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-6 reveal stagger-3">
+              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+                Do you work with businesses of all sizes?
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Yes. From startups looking to automate from day one to
+                enterprises optimizing existing operations, we tailor solutions
+                to fit your scale and budget.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-6 reveal stagger-4">
+              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+                What tools and platforms do you integrate with?
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                We integrate with 500+ tools including Slack, HubSpot, Stripe,
+                Google Workspace, Notion, Airtable, Shopify, and any platform
+                with an API.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer
+        class="w-full py-12"
+        style="border-top: 1px solid rgba(79, 109, 245, 0.08)"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <a href="index.html" class="flex items-center gap-2">
+              <div
+                class="w-7 h-7 rounded-md flex items-center justify-center"
+                style="background: linear-gradient(135deg, #4f6df5, #8b5cf6)"
+              >
+                <i
+                  data-lucide="zap"
+                  style="width: 14px; height: 14px; color: #fff"
+                ></i>
+              </div>
+              <span
+                class="font-mono-accent font-bold text-sm"
+                style="color: rgba(226, 228, 240, 0.6)"
+                >NEXFLOW</span
+              >
+            </a>
+            <div class="flex items-center gap-6">
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                style="color: rgba(226, 228, 240, 0.3)"
+                class="hover:text-white transition-colors"
+                ><i
+                  data-lucide="twitter"
+                  style="width: 18px; height: 18px"
+                ></i
+              ></a>
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                style="color: rgba(226, 228, 240, 0.3)"
+                class="hover:text-white transition-colors"
+                ><i
+                  data-lucide="linkedin"
+                  style="width: 18px; height: 18px"
+                ></i
+              ></a>
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                style="color: rgba(226, 228, 240, 0.3)"
+                class="hover:text-white transition-colors"
+                ><i
+                  data-lucide="github"
+                  style="width: 18px; height: 18px"
+                ></i
+              ></a>
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                style="color: rgba(226, 228, 240, 0.3)"
+                class="hover:text-white transition-colors"
+                ><i data-lucide="mail" style="width: 18px; height: 18px"></i
+              ></a>
+            </div>
+            <p class="text-xs" style="color: rgba(226, 228, 240, 0.25)">
+              &copy; 2025 Nexflow. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

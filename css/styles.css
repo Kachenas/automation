@@ -1,0 +1,284 @@
+/* ===== Base Reset ===== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== CSS Variables ===== */
+:root {
+  --bg-primary: #06060e;
+  --surface: #0d0d1a;
+  --text-primary: #e2e4f0;
+  --accent-blue: #4f6df5;
+  --accent-violet: #8b5cf6;
+}
+
+/* ===== Typography ===== */
+body {
+  font-family: "Outfit", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.font-mono-accent {
+  font-family: "Space Mono", monospace;
+}
+
+/* ===== Glow Effects ===== */
+.glow-blue {
+  box-shadow:
+    0 0 40px rgba(79, 109, 245, 0.15),
+    0 0 80px rgba(79, 109, 245, 0.05);
+}
+
+.glow-violet {
+  box-shadow:
+    0 0 40px rgba(139, 92, 246, 0.15),
+    0 0 80px rgba(139, 92, 246, 0.05);
+}
+
+.glow-line {
+  box-shadow: 0 0 20px rgba(79, 109, 245, 0.4);
+}
+
+/* ===== Glass Card ===== */
+.glass-card {
+  background: linear-gradient(
+    135deg,
+    rgba(13, 13, 26, 0.8),
+    rgba(20, 20, 40, 0.6)
+  );
+  border: 1px solid rgba(79, 109, 245, 0.12);
+  backdrop-filter: blur(20px);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.glass-card:hover {
+  border-color: rgba(79, 109, 245, 0.35);
+  box-shadow:
+    0 0 50px rgba(79, 109, 245, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px);
+}
+
+/* ===== Grid Background ===== */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(79, 109, 245, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(79, 109, 245, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ===== Hero Orb ===== */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+@keyframes orbFloat {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(20px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-15px, 15px) scale(0.95);
+  }
+}
+
+/* ===== Node Pulse Animation ===== */
+@keyframes nodePulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    r: 4;
+  }
+  50% {
+    opacity: 1;
+    r: 6;
+  }
+}
+
+@keyframes lineFlow {
+  0% {
+    stroke-dashoffset: 200;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.node-pulse {
+  animation: nodePulse 3s ease-in-out infinite;
+}
+
+.line-flow {
+  stroke-dasharray: 8 12;
+  animation: lineFlow 4s linear infinite;
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Stagger Delays ===== */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* ===== Buttons ===== */
+.btn-primary {
+  background: linear-gradient(135deg, #4f6df5, #8b5cf6);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #6380ff, #a07aff);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover::before {
+  opacity: 1;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 30px rgba(79, 109, 245, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-primary span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn-outline {
+  border: 1px solid rgba(79, 109, 245, 0.4);
+  color: #a0b4ff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: #4f6df5;
+  background: rgba(79, 109, 245, 0.08);
+  box-shadow: 0 0 20px rgba(79, 109, 245, 0.15);
+}
+
+/* ===== Timeline ===== */
+.timeline-line {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(79, 109, 245, 0.05),
+    rgba(79, 109, 245, 0.4),
+    rgba(139, 92, 246, 0.4),
+    rgba(139, 92, 246, 0.05)
+  );
+}
+
+/* ===== Section Divider ===== */
+.section-glow {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(79, 109, 245, 0.3),
+    rgba(139, 92, 246, 0.3),
+    transparent
+  );
+}
+
+/* ===== Flow Step ===== */
+.flow-step {
+  position: relative;
+}
+
+/* ===== Smooth Scroll ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #06060e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(79, 109, 245, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(79, 109, 245, 0.5);
+}
+
+/* ===== Contact Form ===== */
+.form-input {
+  background: rgba(13, 13, 26, 0.8);
+  border: 1px solid rgba(79, 109, 245, 0.15);
+  color: #e2e4f0;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: rgba(79, 109, 245, 0.5);
+  box-shadow: 0 0 20px rgba(79, 109, 245, 0.1);
+}
+
+.form-input::placeholder {
+  color: rgba(226, 228, 240, 0.3);
+}
+
+/* ===== Error Page ===== */
+.error-code {
+  font-size: clamp(6rem, 20vw, 12rem);
+  font-weight: 900;
+  line-height: 1;
+  background: linear-gradient(135deg, #4f6df5, #8b5cf6, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, -1px); }
+  80% { transform: translate(1px, 1px); }
+}
+
+.glitch-text {
+  animation: glitch 3s ease-in-out infinite;
+}

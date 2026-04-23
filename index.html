@@ -1,0 +1,1461 @@
+<!doctype html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Automation Agency</title>
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  </head>
+  <body class="h-full">
+    <div
+      id="app-wrapper"
+      class="w-full h-full overflow-auto grid-bg"
+      style="background-color: var(--bg-primary)"
+    >
+      <!-- NAV -->
+      <nav
+        class="fixed top-0 left-0 w-full z-50"
+        style="
+          background: rgba(6, 6, 14, 0.8);
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid rgba(79, 109, 245, 0.08);
+        "
+      >
+        <div
+          class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between"
+        >
+          <div class="flex items-center gap-2">
+            <div
+              class="w-8 h-8 rounded-lg flex items-center justify-center"
+              style="background: linear-gradient(135deg, #4f6df5, #8b5cf6)"
+            >
+              <i
+                data-lucide="zap"
+                style="width: 18px; height: 18px; color: #fff"
+              ></i>
+            </div>
+            <span
+              class="font-mono-accent font-bold text-lg tracking-tight"
+              style="color: #e2e4f0"
+              >Vibe Check Automation Platform</span
+            >
+          </div>
+          <div
+            class="hidden md:flex items-center gap-8 text-sm"
+            style="color: rgba(226, 228, 240, 0.5)"
+          >
+            <a href="#problems" class="hover:text-white transition-colors"
+              >Problems</a
+            >
+            <a href="#services" class="hover:text-white transition-colors"
+              >Services</a
+            >
+            <a href="#process" class="hover:text-white transition-colors"
+              >Process</a
+            >
+            <a href="#results" class="hover:text-white transition-colors"
+              >Results</a
+            >
+            <a href="contact.html" class="hover:text-white transition-colors"
+              >Contact</a
+            >
+          </div>
+          <a
+            href="contact.html"
+            class="btn-primary px-5 py-2 rounded-full text-sm font-semibold text-white cursor-pointer hidden sm:inline-block"
+            ><span>Get Started</span></a
+          >
+        </div>
+      </nav>
+      <!-- HERO -->
+      <section
+        class="relative w-full overflow-hidden"
+        style="padding-top: 140px; padding-bottom: 100px"
+      >
+        <!-- Orbs -->
+        <div
+          class="hero-orb"
+          style="
+            width: 500px;
+            height: 500px;
+            background: rgba(79, 109, 245, 0.08);
+            top: -100px;
+            left: -150px;
+          "
+        ></div>
+        <div
+          class="hero-orb"
+          style="
+            width: 400px;
+            height: 400px;
+            background: rgba(139, 92, 246, 0.06);
+            bottom: -100px;
+            right: -100px;
+            animation-delay: -3s;
+          "
+        ></div>
+        <div
+          class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16 relative z-10"
+        >
+          <div class="flex-1 text-center lg:text-left">
+            <div
+              class="inline-block mb-6 px-4 py-1.5 rounded-full text-xs font-mono-accent tracking-widest"
+              style="
+                background: rgba(79, 109, 245, 0.08);
+                border: 1px solid rgba(79, 109, 245, 0.2);
+                color: #8ba0ff;
+              "
+            >
+              AI-POWERED AUTOMATION
+            </div>
+            <h1
+              id="hero-headline"
+              class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight"
+              style="color: #f0f1f7"
+            >
+              Automate Your Business<br />
+              with AI Agents That<br /><span
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    #4f6df5,
+                    #8b5cf6,
+                    #c084fc
+                  );
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                "
+                >Actually Work</span
+              >
+            </h1>
+            <p
+              id="hero-subheadline"
+              class="mt-6 text-lg leading-relaxed max-w-xl mx-auto lg:mx-0"
+              style="color: rgba(226, 228, 240, 0.55)"
+            >
+              We design intelligent systems using AI + automation tools like n8n
+              to eliminate repetitive work, reduce costs, and scale your
+              operations.
+            </p>
+            <div
+              class="mt-10 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+            >
+              <a
+                href="#final-cta"
+                id="cta-primary-btn"
+                class="btn-primary px-8 py-4 rounded-full font-semibold text-white text-center cursor-pointer"
+                ><span>Get a Free Automation Audit</span></a
+              >
+              <a
+                href="#solution"
+                id="cta-secondary-btn"
+                class="btn-outline px-8 py-4 rounded-full font-semibold text-center cursor-pointer"
+                >See How It Works</a
+              >
+            </div>
+          </div>
+          <!-- Hero Visual: AI Network -->
+          <div class="flex-1 flex justify-center">
+            <svg
+              viewbox="0 0 400 400"
+              width="400"
+              height="400"
+              class="w-full max-w-sm lg:max-w-md"
+            >
+              <!-- Connections -->
+              <line
+                x1="200"
+                y1="100"
+                x2="120"
+                y2="200"
+                stroke="url(#grad1)"
+                stroke-width="1.5"
+                class="line-flow"
+                opacity="0.6"
+              />
+              <line
+                x1="200"
+                y1="100"
+                x2="280"
+                y2="180"
+                stroke="url(#grad1)"
+                stroke-width="1.5"
+                class="line-flow"
+                style="animation-delay: -1s"
+                opacity="0.6"
+              />
+              <line
+                x1="120"
+                y1="200"
+                x2="200"
+                y2="300"
+                stroke="url(#grad2)"
+                stroke-width="1.5"
+                class="line-flow"
+                style="animation-delay: -2s"
+                opacity="0.6"
+              />
+              <line
+                x1="280"
+                y1="180"
+                x2="200"
+                y2="300"
+                stroke="url(#grad2)"
+                stroke-width="1.5"
+                class="line-flow"
+                style="animation-delay: -0.5s"
+                opacity="0.6"
+              />
+              <line
+                x1="280"
+                y1="180"
+                x2="340"
+                y2="260"
+                stroke="url(#grad1)"
+                stroke-width="1"
+                class="line-flow"
+                style="animation-delay: -3s"
+                opacity="0.4"
+              />
+              <line
+                x1="120"
+                y1="200"
+                x2="60"
+                y2="280"
+                stroke="url(#grad2)"
+                stroke-width="1"
+                class="line-flow"
+                style="animation-delay: -1.5s"
+                opacity="0.4"
+              />
+              <line
+                x1="200"
+                y1="300"
+                x2="140"
+                y2="350"
+                stroke="url(#grad1)"
+                stroke-width="1"
+                class="line-flow"
+                style="animation-delay: -2.5s"
+                opacity="0.3"
+              />
+              <line
+                x1="200"
+                y1="300"
+                x2="270"
+                y2="350"
+                stroke="url(#grad2)"
+                stroke-width="1"
+                class="line-flow"
+                style="animation-delay: -3.5s"
+                opacity="0.3"
+              />
+              <!-- Central glow -->
+              <circle
+                cx="200"
+                cy="200"
+                r="80"
+                fill="url(#radialGlow)"
+                opacity="0.15"
+              />
+              <!-- Nodes -->
+              <circle
+                cx="200"
+                cy="100"
+                r="6"
+                fill="#4f6df5"
+                class="node-pulse"
+              />
+              <circle
+                cx="200"
+                cy="100"
+                r="14"
+                fill="none"
+                stroke="#4f6df5"
+                stroke-width="0.5"
+                opacity="0.3"
+              />
+              <circle
+                cx="120"
+                cy="200"
+                r="5"
+                fill="#8b5cf6"
+                class="node-pulse"
+                style="animation-delay: -1s"
+              />
+              <circle
+                cx="120"
+                cy="200"
+                r="12"
+                fill="none"
+                stroke="#8b5cf6"
+                stroke-width="0.5"
+                opacity="0.3"
+              />
+              <circle
+                cx="280"
+                cy="180"
+                r="5"
+                fill="#4f6df5"
+                class="node-pulse"
+                style="animation-delay: -2s"
+              />
+              <circle
+                cx="280"
+                cy="180"
+                r="12"
+                fill="none"
+                stroke="#4f6df5"
+                stroke-width="0.5"
+                opacity="0.3"
+              />
+              <circle
+                cx="200"
+                cy="300"
+                r="7"
+                fill="#8b5cf6"
+                class="node-pulse"
+                style="animation-delay: -0.5s"
+              />
+              <circle
+                cx="200"
+                cy="300"
+                r="16"
+                fill="none"
+                stroke="#8b5cf6"
+                stroke-width="0.5"
+                opacity="0.3"
+              />
+              <circle
+                cx="340"
+                cy="260"
+                r="3"
+                fill="#4f6df5"
+                class="node-pulse"
+                style="animation-delay: -3s"
+                opacity="0.6"
+              />
+              <circle
+                cx="60"
+                cy="280"
+                r="3"
+                fill="#8b5cf6"
+                class="node-pulse"
+                style="animation-delay: -1.5s"
+                opacity="0.6"
+              />
+              <circle
+                cx="140"
+                cy="350"
+                r="3"
+                fill="#4f6df5"
+                class="node-pulse"
+                style="animation-delay: -2.5s"
+                opacity="0.5"
+              />
+              <circle
+                cx="270"
+                cy="350"
+                r="3"
+                fill="#8b5cf6"
+                class="node-pulse"
+                style="animation-delay: -3.5s"
+                opacity="0.5"
+              />
+              <!-- Center AI icon area -->
+              <circle
+                cx="200"
+                cy="200"
+                r="24"
+                fill="rgba(13,13,26,0.9)"
+                stroke="url(#grad1)"
+                stroke-width="1.5"
+              />
+              <text
+                x="200"
+                y="207"
+                text-anchor="middle"
+                fill="#a0b4ff"
+                font-size="18"
+                font-family="'Space Mono', monospace"
+              >
+                AI
+              </text>
+              <defs>
+                <lineargradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4f6df5" />
+                  <stop offset="100%" stop-color="#8b5cf6" />
+                </lineargradient>
+                <lineargradient id="grad2" x1="100%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#8b5cf6" />
+                  <stop offset="100%" stop-color="#4f6df5" />
+                </lineargradient>
+                <radialgradient id="radialGlow">
+                  <stop offset="0%" stop-color="#4f6df5" />
+                  <stop offset="100%" stop-color="transparent" />
+                </radialgradient>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </section>
+      <div class="section-glow w-full"></div>
+      <!-- PROBLEM SECTION -->
+      <section id="problems" class="w-full py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-16 reveal">
+            <p
+              class="font-mono-accent text-xs tracking-widest mb-4"
+              style="color: #8b5cf6"
+            >
+              THE PROBLEM
+            </p>
+            <h2
+              id="problem-headline"
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
+              style="color: #f0f1f7"
+            >
+              You're Losing Time on Work<br />
+              That Should Be Automated
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card rounded-2xl p-8 reveal stagger-1">
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                style="background: rgba(79, 109, 245, 0.1)"
+              >
+                <i
+                  data-lucide="clipboard-list"
+                  style="width: 22px; height: 22px; color: #4f6df5"
+                ></i>
+              </div>
+              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+                Manual Data Entry
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Hours spent copying data between spreadsheets, tools, and
+                systems that should talk to each other.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-8 reveal stagger-2">
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                style="background: rgba(139, 92, 246, 0.1)"
+              >
+                <i
+                  data-lucide="repeat"
+                  style="width: 22px; height: 22px; color: #8b5cf6"
+                ></i>
+              </div>
+              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+                Repetitive Admin Tasks
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Your team wastes talent on tasks a well-designed system could
+                handle in seconds.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-8 reveal stagger-3">
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                style="background: rgba(79, 109, 245, 0.1)"
+              >
+                <i
+                  data-lucide="unplug"
+                  style="width: 22px; height: 22px; color: #4f6df5"
+                ></i>
+              </div>
+              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+                Disconnected Systems
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Your CRM doesn't talk to your invoicing. Your forms don't feed
+                your database. Chaos.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-8 reveal stagger-4">
+              <div
+                class="w-12 h-12 rounded-xl flex items-center justify-center mb-5"
+                style="background: rgba(139, 92, 246, 0.1)"
+              >
+                <i
+                  data-lucide="clock"
+                  style="width: 22px; height: 22px; color: #8b5cf6"
+                ></i>
+              </div>
+              <h3 class="font-semibold text-lg mb-2" style="color: #e2e4f0">
+                Missed Opportunities
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Slow response times and bottlenecks cost you leads, revenue, and
+                competitive edge.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-glow w-full"></div>
+      <!-- SOLUTION SECTION -->
+      <section id="solution" class="w-full py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-16 reveal">
+            <p
+              class="font-mono-accent text-xs tracking-widest mb-4"
+              style="color: #4f6df5"
+            >
+              THE SOLUTION
+            </p>
+            <h2
+              id="solution-headline"
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
+              style="color: #f0f1f7"
+            >
+              We Build Intelligent<br />
+              Automation Systems
+            </h2>
+            <p
+              class="mt-6 text-lg max-w-2xl mx-auto"
+              style="color: rgba(226, 228, 240, 0.5)"
+            >
+              By combining AI agents, n8n workflows, and custom backend
+              architecture, we create systems that think, act, and scale — so
+              you don't have to.
+            </p>
+          </div>
+          <!-- 3 Pillars -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div
+              class="glass-card rounded-2xl p-8 text-center reveal stagger-1"
+            >
+              <div
+                class="w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(79, 109, 245, 0.15),
+                    rgba(79, 109, 245, 0.05)
+                  );
+                "
+              >
+                <i
+                  data-lucide="brain"
+                  style="width: 28px; height: 28px; color: #4f6df5"
+                ></i>
+              </div>
+              <h3 class="font-bold text-xl mb-3" style="color: #e2e4f0">
+                AI Agents
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Decision-making automation that understands context, processes
+                data, and acts intelligently.
+              </p>
+            </div>
+            <div
+              class="glass-card rounded-2xl p-8 text-center reveal stagger-2"
+            >
+              <div
+                class="w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(139, 92, 246, 0.15),
+                    rgba(139, 92, 246, 0.05)
+                  );
+                "
+              >
+                <i
+                  data-lucide="git-branch"
+                  style="width: 28px; height: 28px; color: #8b5cf6"
+                ></i>
+              </div>
+              <h3 class="font-bold text-xl mb-3" style="color: #e2e4f0">
+                n8n Workflows
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Visual process automation that connects your tools, triggers
+                actions, and runs 24/7 without you.
+              </p>
+            </div>
+            <div
+              class="glass-card rounded-2xl p-8 text-center reveal stagger-3"
+            >
+              <div
+                class="w-16 h-16 rounded-2xl mx-auto flex items-center justify-center mb-6"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    rgba(79, 109, 245, 0.1),
+                    rgba(139, 92, 246, 0.1)
+                  );
+                "
+              >
+                <i
+                  data-lucide="server"
+                  style="width: 28px; height: 28px; color: #a07aff"
+                ></i>
+              </div>
+              <h3 class="font-bold text-xl mb-3" style="color: #e2e4f0">
+                Custom Systems
+              </h3>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Scalable backend architecture built to handle your unique
+                business logic and data flows.
+              </p>
+            </div>
+          </div>
+          <!-- Flow Diagram -->
+          <div class="reveal">
+            <div class="glass-card rounded-2xl p-8 sm:p-12">
+              <div
+                class="flex flex-col sm:flex-row items-center justify-between gap-6 sm:gap-4"
+              >
+                <div class="flow-step text-center flex-1">
+                  <div
+                    class="w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3"
+                    style="
+                      background: rgba(79, 109, 245, 0.12);
+                      border: 1px solid rgba(79, 109, 245, 0.3);
+                    "
+                  >
+                    <i
+                      data-lucide="play"
+                      style="width: 20px; height: 20px; color: #4f6df5"
+                    ></i>
+                  </div>
+                  <p class="font-semibold text-sm" style="color: #e2e4f0">
+                    Trigger
+                  </p>
+                  <p
+                    class="text-xs mt-1"
+                    style="color: rgba(226, 228, 240, 0.35)"
+                  >
+                    Event detected
+                  </p>
+                </div>
+                <div
+                  class="hidden sm:block flex-shrink-0"
+                  style="
+                    width: 60px;
+                    height: 2px;
+                    background: linear-gradient(90deg, #4f6df5, #8b5cf6);
+                  "
+                ></div>
+                <i
+                  data-lucide="chevron-down"
+                  class="sm:hidden"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    color: rgba(79, 109, 245, 0.4);
+                  "
+                ></i>
+                <div class="flow-step text-center flex-1">
+                  <div
+                    class="w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3"
+                    style="
+                      background: rgba(139, 92, 246, 0.12);
+                      border: 1px solid rgba(139, 92, 246, 0.3);
+                    "
+                  >
+                    <i
+                      data-lucide="brain"
+                      style="width: 20px; height: 20px; color: #8b5cf6"
+                    ></i>
+                  </div>
+                  <p class="font-semibold text-sm" style="color: #e2e4f0">
+                    AI Decision
+                  </p>
+                  <p
+                    class="text-xs mt-1"
+                    style="color: rgba(226, 228, 240, 0.35)"
+                  >
+                    Analyzes &amp; decides
+                  </p>
+                </div>
+                <div
+                  class="hidden sm:block flex-shrink-0"
+                  style="
+                    width: 60px;
+                    height: 2px;
+                    background: linear-gradient(90deg, #8b5cf6, #4f6df5);
+                  "
+                ></div>
+                <i
+                  data-lucide="chevron-down"
+                  class="sm:hidden"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    color: rgba(139, 92, 246, 0.4);
+                  "
+                ></i>
+                <div class="flow-step text-center flex-1">
+                  <div
+                    class="w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3"
+                    style="
+                      background: rgba(79, 109, 245, 0.12);
+                      border: 1px solid rgba(79, 109, 245, 0.3);
+                    "
+                  >
+                    <i
+                      data-lucide="cog"
+                      style="width: 20px; height: 20px; color: #4f6df5"
+                    ></i>
+                  </div>
+                  <p class="font-semibold text-sm" style="color: #e2e4f0">
+                    Auto Action
+                  </p>
+                  <p
+                    class="text-xs mt-1"
+                    style="color: rgba(226, 228, 240, 0.35)"
+                  >
+                    Executes the task
+                  </p>
+                </div>
+                <div
+                  class="hidden sm:block flex-shrink-0"
+                  style="
+                    width: 60px;
+                    height: 2px;
+                    background: linear-gradient(90deg, #4f6df5, #8b5cf6);
+                  "
+                ></div>
+                <i
+                  data-lucide="chevron-down"
+                  class="sm:hidden"
+                  style="
+                    width: 20px;
+                    height: 20px;
+                    color: rgba(79, 109, 245, 0.4);
+                  "
+                ></i>
+                <div class="flow-step text-center flex-1">
+                  <div
+                    class="w-14 h-14 rounded-full mx-auto flex items-center justify-center mb-3"
+                    style="
+                      background: linear-gradient(
+                        135deg,
+                        rgba(79, 109, 245, 0.15),
+                        rgba(139, 92, 246, 0.15)
+                      );
+                      border: 1px solid rgba(139, 92, 246, 0.3);
+                    "
+                  >
+                    <i
+                      data-lucide="check-circle"
+                      style="width: 20px; height: 20px; color: #a07aff"
+                    ></i>
+                  </div>
+                  <p class="font-semibold text-sm" style="color: #e2e4f0">
+                    Result
+                  </p>
+                  <p
+                    class="text-xs mt-1"
+                    style="color: rgba(226, 228, 240, 0.35)"
+                  >
+                    Done. Logged. Reported.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-glow w-full"></div>
+      <!-- SERVICES -->
+      <section id="services" class="w-full py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-16 reveal">
+            <p
+              class="font-mono-accent text-xs tracking-widest mb-4"
+              style="color: #8b5cf6"
+            >
+              WHAT WE BUILD
+            </p>
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
+              style="color: #f0f1f7"
+            >
+              Services
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="glass-card rounded-2xl p-8 reveal stagger-1">
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style="background: rgba(79, 109, 245, 0.1)"
+                >
+                  <i
+                    data-lucide="bot"
+                    style="width: 20px; height: 20px; color: #4f6df5"
+                  ></i>
+                </div>
+                <h3 class="font-bold" style="color: #e2e4f0">
+                  AI-Powered Automation
+                </h3>
+              </div>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Deploy AI agents that handle customer inquiries, classify data,
+                and make decisions faster than any human team.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-8 reveal stagger-2">
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style="background: rgba(139, 92, 246, 0.1)"
+                >
+                  <i
+                    data-lucide="layout-dashboard"
+                    style="width: 20px; height: 20px; color: #8b5cf6"
+                  ></i>
+                </div>
+                <h3 class="font-bold" style="color: #e2e4f0">
+                  Custom CRM &amp; Tools
+                </h3>
+              </div>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Internal tools tailored to your operations — not bloated SaaS.
+                Track leads, manage projects, and run reports your way.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-8 reveal stagger-3">
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style="background: rgba(79, 109, 245, 0.1)"
+                >
+                  <i
+                    data-lucide="truck"
+                    style="width: 20px; height: 20px; color: #4f6df5"
+                  ></i>
+                </div>
+                <h3 class="font-bold" style="color: #e2e4f0">
+                  Logistics &amp; Inventory
+                </h3>
+              </div>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Automated stock tracking, order fulfillment triggers, and
+                real-time supply chain visibility across your operations.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-8 reveal stagger-4">
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style="background: rgba(139, 92, 246, 0.1)"
+                >
+                  <i
+                    data-lucide="workflow"
+                    style="width: 20px; height: 20px; color: #8b5cf6"
+                  ></i>
+                </div>
+                <h3 class="font-bold" style="color: #e2e4f0">
+                  Workflow Automation
+                </h3>
+              </div>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                n8n-powered workflows that connect your apps, automate
+                processes, and eliminate manual handoffs entirely.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-8 reveal stagger-5">
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style="background: rgba(79, 109, 245, 0.1)"
+                >
+                  <i
+                    data-lucide="plug"
+                    style="width: 20px; height: 20px; color: #4f6df5"
+                  ></i>
+                </div>
+                <h3 class="font-bold" style="color: #e2e4f0">
+                  API Integrations
+                </h3>
+              </div>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Connect any platform — Stripe, Notion, Slack, Google, HubSpot —
+                into one unified, automated ecosystem.
+              </p>
+            </div>
+            <div class="glass-card rounded-2xl p-8 reveal stagger-6">
+              <div class="flex items-center gap-3 mb-4">
+                <div
+                  class="w-10 h-10 rounded-lg flex items-center justify-center"
+                  style="background: rgba(139, 92, 246, 0.1)"
+                >
+                  <i
+                    data-lucide="bell-ring"
+                    style="width: 20px; height: 20px; color: #8b5cf6"
+                  ></i>
+                </div>
+                <h3 class="font-bold" style="color: #e2e4f0">
+                  Real-time Monitoring
+                </h3>
+              </div>
+              <p
+                class="text-sm leading-relaxed"
+                style="color: rgba(226, 228, 240, 0.45)"
+              >
+                Instant alerts, live dashboards, and automated reporting so you
+                always know what's happening in your business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-glow w-full"></div>
+      <!-- HOW IT WORKS -->
+      <section id="process" class="w-full py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center mb-16 reveal">
+            <p
+              class="font-mono-accent text-xs tracking-widest mb-4"
+              style="color: #4f6df5"
+            >
+              THE PROCESS
+            </p>
+            <h2
+              class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight"
+              style="color: #f0f1f7"
+            >
+              How It Works
+            </h2>
+          </div>
+          <div class="relative max-w-4xl mx-auto">
+            <!-- Timeline line (desktop) -->
+            <div
+              class="hidden md:block absolute top-12 left-0 right-0 timeline-line"
+            ></div>
+            <div
+              class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 relative"
+            >
+              <div class="text-center reveal stagger-1">
+                <div
+                  class="w-24 h-24 rounded-full mx-auto flex items-center justify-center relative z-10 glow-blue"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      rgba(13, 13, 26, 0.95),
+                      rgba(20, 20, 40, 0.95)
+                    );
+                    border: 1px solid rgba(79, 109, 245, 0.3);
+                  "
+                >
+                  <div>
+                    <span
+                      class="font-mono-accent text-xs block mb-1"
+                      style="color: rgba(79, 109, 245, 0.6)"
+                      >01</span
+                    >
+                    <i
+                      data-lucide="search"
+                      style="width: 28px; height: 28px; color: #4f6df5"
+                    ></i>
+                  </div>
+                </div>
+                <h3 class="font-bold text-lg mt-6 mb-2" style="color: #e2e4f0">
+                  Audit Your Business
+                </h3>
+                <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                  We map your workflows, identify bottlenecks, and find the
+                  highest-impact automation opportunities.
+                </p>
+              </div>
+              <div class="text-center reveal stagger-2">
+                <div
+                  class="w-24 h-24 rounded-full mx-auto flex items-center justify-center relative z-10 glow-violet"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      rgba(13, 13, 26, 0.95),
+                      rgba(20, 20, 40, 0.95)
+                    );
+                    border: 1px solid rgba(139, 92, 246, 0.3);
+                  "
+                >
+                  <div>
+                    <span
+                      class="font-mono-accent text-xs block mb-1"
+                      style="color: rgba(139, 92, 246, 0.6)"
+                      >02</span
+                    >
+                    <i
+                      data-lucide="pen-tool"
+                      style="width: 28px; height: 28px; color: #8b5cf6"
+                    ></i>
+                  </div>
+                </div>
+                <h3 class="font-bold text-lg mt-6 mb-2" style="color: #e2e4f0">
+                  Design Automation System
+                </h3>
+                <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                  We architect a custom solution combining AI agents, workflows,
+                  and integrations tailored to you.
+                </p>
+              </div>
+              <div class="text-center reveal stagger-3">
+                <div
+                  class="w-24 h-24 rounded-full mx-auto flex items-center justify-center relative z-10"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      rgba(13, 13, 26, 0.95),
+                      rgba(20, 20, 40, 0.95)
+                    );
+                    border: 1px solid rgba(79, 109, 245, 0.2);
+                    box-shadow:
+                      0 0 40px rgba(79, 109, 245, 0.1),
+                      0 0 40px rgba(139, 92, 246, 0.1);
+                  "
+                >
+                  <div>
+                    <span
+                      class="font-mono-accent text-xs block mb-1"
+                      style="color: rgba(160, 122, 255, 0.6)"
+                      >03</span
+                    >
+                    <i
+                      data-lucide="rocket"
+                      style="width: 28px; height: 28px; color: #a07aff"
+                    ></i>
+                  </div>
+                </div>
+                <h3 class="font-bold text-lg mt-6 mb-2" style="color: #e2e4f0">
+                  Deploy &amp; Scale
+                </h3>
+                <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                  We build, test, and launch your system — then optimize it as
+                  your business grows.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-glow w-full"></div>
+      <!-- RESULTS / BENEFITS -->
+      <section id="results" class="w-full py-24 relative">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col lg:flex-row items-center gap-16">
+            <div class="flex-1 reveal">
+              <p
+                class="font-mono-accent text-xs tracking-widest mb-4"
+                style="color: #8b5cf6"
+              >
+                THE RESULTS
+              </p>
+              <h2
+                class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-8"
+                style="color: #f0f1f7"
+              >
+                What You Gain
+              </h2>
+              <div class="space-y-6">
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5"
+                    style="background: rgba(79, 109, 245, 0.1)"
+                  >
+                    <i
+                      data-lucide="timer"
+                      style="width: 20px; height: 20px; color: #4f6df5"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                      Save Hundreds of Hours Monthly
+                    </h3>
+                    <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                      Reclaim the time your team spends on repetitive manual
+                      work and redirect it to growth.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5"
+                    style="background: rgba(139, 92, 246, 0.1)"
+                  >
+                    <i
+                      data-lucide="trending-down"
+                      style="width: 20px; height: 20px; color: #8b5cf6"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                      Reduce Operational Costs
+                    </h3>
+                    <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                      Automation does in seconds what used to take a full-time
+                      employee hours. The math is simple.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5"
+                    style="background: rgba(79, 109, 245, 0.1)"
+                  >
+                    <i
+                      data-lucide="shield-check"
+                      style="width: 20px; height: 20px; color: #4f6df5"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                      Eliminate Human Errors
+                    </h3>
+                    <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                      Systems don't get tired, distracted, or make typos. Your
+                      data stays clean and reliable.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div
+                    class="w-10 h-10 rounded-lg flex-shrink-0 flex items-center justify-center mt-0.5"
+                    style="background: rgba(139, 92, 246, 0.1)"
+                  >
+                    <i
+                      data-lucide="arrow-up-right"
+                      style="width: 20px; height: 20px; color: #8b5cf6"
+                    ></i>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold mb-1" style="color: #e2e4f0">
+                      Scale Without Hiring
+                    </h3>
+                    <p class="text-sm" style="color: rgba(226, 228, 240, 0.45)">
+                      Handle 10x the volume without 10x the team. Automation
+                      scales with your business, not your payroll.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Stats visual -->
+            <div class="flex-1 reveal stagger-2">
+              <div class="grid grid-cols-2 gap-5">
+                <div class="glass-card rounded-2xl p-8 text-center">
+                  <p
+                    class="text-4xl font-extrabold"
+                    style="
+                      background: linear-gradient(135deg, #4f6df5, #8b5cf6);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    "
+                  >
+                    70%
+                  </p>
+                  <p
+                    class="text-xs mt-2 font-mono-accent"
+                    style="color: rgba(226, 228, 240, 0.4)"
+                  >
+                    LESS MANUAL WORK
+                  </p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center">
+                  <p
+                    class="text-4xl font-extrabold"
+                    style="
+                      background: linear-gradient(135deg, #8b5cf6, #c084fc);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    "
+                  >
+                    3x
+                  </p>
+                  <p
+                    class="text-xs mt-2 font-mono-accent"
+                    style="color: rgba(226, 228, 240, 0.4)"
+                  >
+                    FASTER OPERATIONS
+                  </p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center">
+                  <p
+                    class="text-4xl font-extrabold"
+                    style="
+                      background: linear-gradient(135deg, #4f6df5, #a07aff);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    "
+                  >
+                    500+
+                  </p>
+                  <p
+                    class="text-xs mt-2 font-mono-accent"
+                    style="color: rgba(226, 228, 240, 0.4)"
+                  >
+                    HOURS SAVED / MONTH
+                  </p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center">
+                  <p
+                    class="text-4xl font-extrabold"
+                    style="
+                      background: linear-gradient(135deg, #8b5cf6, #4f6df5);
+                      -webkit-background-clip: text;
+                      -webkit-text-fill-color: transparent;
+                    "
+                  >
+                    24/7
+                  </p>
+                  <p
+                    class="text-xs mt-2 font-mono-accent"
+                    style="color: rgba(226, 228, 240, 0.4)"
+                  >
+                    ALWAYS RUNNING
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-glow w-full"></div>
+      <!-- TESTIMONIAL -->
+      <section class="w-full py-24 relative">
+        <div class="max-w-4xl mx-auto px-6">
+          <div
+            class="glass-card rounded-3xl p-10 sm:p-14 text-center reveal glow-violet"
+          >
+            <i
+              data-lucide="quote"
+              style="
+                width: 36px;
+                height: 36px;
+                color: rgba(139, 92, 246, 0.3);
+                margin: 0 auto 20px;
+                display: block;
+              "
+            ></i>
+            <p
+              class="text-xl sm:text-2xl font-medium leading-relaxed mb-8"
+              style="color: #e2e4f0"
+            >
+              "Reduced manual workload by
+              <span style="color: #8b5cf6">70%</span> for our logistics
+              operations using automated workflows. What used to take our team 4
+              hours daily now runs in the background — zero human input."
+            </p>
+            <div class="flex items-center justify-center gap-4">
+              <div
+                class="w-12 h-12 rounded-full flex items-center justify-center font-bold"
+                style="
+                  background: linear-gradient(135deg, #4f6df5, #8b5cf6);
+                  color: #fff;
+                "
+              >
+                MK
+              </div>
+              <div class="text-left">
+                <p class="font-semibold text-sm" style="color: #e2e4f0">
+                  Marcus Klein
+                </p>
+                <p class="text-xs" style="color: rgba(226, 228, 240, 0.4)">
+                  Operations Director, NovaTrans Logistics
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="section-glow w-full"></div>
+      <!-- FINAL CTA -->
+      <section id="final-cta" class="w-full py-28 relative overflow-hidden">
+        <div
+          class="hero-orb"
+          style="
+            width: 600px;
+            height: 600px;
+            background: rgba(79, 109, 245, 0.06);
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+          "
+        ></div>
+        <div class="max-w-3xl mx-auto px-6 text-center relative z-10 reveal">
+          <p
+            class="font-mono-accent text-xs tracking-widest mb-6"
+            style="color: #4f6df5"
+          >
+            READY?
+          </p>
+          <h2
+            id="final-cta-headline"
+            class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6"
+            style="color: #f0f1f7"
+          >
+            Stop Doing Manual Work.<br />
+            Start Scaling Smarter.
+          </h2>
+          <p class="text-lg mb-10" style="color: rgba(226, 228, 240, 0.5)">
+            Let's map your business processes and show you exactly where
+            automation will save you time, money, and sanity.
+          </p>
+          <a
+            href="contact.html"
+            id="final-cta-button"
+            class="btn-primary inline-block px-10 py-5 rounded-full font-bold text-lg text-white cursor-pointer"
+            ><span>Book a Free Consultation</span></a
+          >
+          <p
+            id="urgency-text"
+            class="mt-6 text-sm font-mono-accent"
+            style="color: rgba(139, 92, 246, 0.6)"
+          >
+            ⚡ Limited onboarding slots available
+          </p>
+        </div>
+      </section>
+      <!-- FOOTER -->
+      <footer
+        class="w-full py-12"
+        style="border-top: 1px solid rgba(79, 109, 245, 0.08)"
+      >
+        <div class="max-w-7xl mx-auto px-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div class="flex items-center gap-2">
+              <div
+                class="w-7 h-7 rounded-md flex items-center justify-center"
+                style="background: linear-gradient(135deg, #4f6df5, #8b5cf6)"
+              >
+                <i
+                  data-lucide="zap"
+                  style="width: 14px; height: 14px; color: #fff"
+                ></i>
+              </div>
+              <span
+                class="font-mono-accent font-bold text-sm"
+                style="color: rgba(226, 228, 240, 0.6)"
+                >VibeCheck Automation Platform</span
+              >
+            </div>
+            <div class="flex items-center gap-6">
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                style="color: rgba(226, 228, 240, 0.3)"
+                class="hover:text-white transition-colors"
+                ><i data-lucide="twitter" style="width: 18px; height: 18px"></i
+              ></a>
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                style="color: rgba(226, 228, 240, 0.3)"
+                class="hover:text-white transition-colors"
+                ><i data-lucide="linkedin" style="width: 18px; height: 18px"></i
+              ></a>
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                style="color: rgba(226, 228, 240, 0.3)"
+                class="hover:text-white transition-colors"
+                ><i data-lucide="github" style="width: 18px; height: 18px"></i
+              ></a>
+              <a
+                href="#"
+                onclick="event.preventDefault()"
+                style="color: rgba(226, 228, 240, 0.3)"
+                class="hover:text-white transition-colors"
+                ><i data-lucide="mail" style="width: 18px; height: 18px"></i
+              ></a>
+            </div>
+            <p class="text-xs" style="color: rgba(226, 228, 240, 0.25)">
+              © <span id="current-year"></span> VibeCheck Automation Platform.
+              All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="js/main.js"></script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'9ea149e525199af4',t:'MTc3NTgxOTI1NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+  </body>
+</html>
