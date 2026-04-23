@@ -8,11 +8,11 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: "Environment to deploy to"
+        description: "Environment Production deploy"
         required: true
         type: choice
         options:
-          - main
+          - production
 
 permissions:
   id-token: write
@@ -22,7 +22,7 @@ jobs:
   deploy:
     name: Build & Deploy
     runs-on: ubuntu-latest
-    environment: main
+    environment: production
 
     steps:
       - name: Checkout code
