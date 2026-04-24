@@ -21,7 +21,12 @@ function updateToggleIcon(theme) {
   if (typeof lucide !== "undefined") lucide.createIcons();
 }
 
+let _themeToggling = false;
 function toggleTheme() {
+  if (_themeToggling) return;
+  _themeToggling = true;
+  setTimeout(() => { _themeToggling = false; }, 300);
+
   const current = document.documentElement.getAttribute("data-theme");
   const next = current === "navy-gold" ? "" : "navy-gold";
   if (next) {
@@ -293,18 +298,36 @@ setCurrentYear();
 // ===== Contact Form Handler =====
 const contactForm = document.getElementById("contact-form");
 if (contactForm) {
+  let isSubmitting = false;
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
+    if (isSubmitting) return;
+    isSubmitting = true;
+
     const btn = contactForm.querySelector('button[type="submit"]');
     const originalText = btn.innerHTML;
-    btn.innerHTML = '<span>Message Sent!</span>';
     btn.disabled = true;
     btn.style.opacity = "0.7";
+    btn.innerHTML = '<span>Sending...</span>';
+
     setTimeout(() => {
-      btn.innerHTML = originalText;
-      btn.disabled = false;
-      btn.style.opacity = "1";
+      btn.innerHTML = '<span>Message Sent!</span>';
       contactForm.reset();
-    }, 3000);
+
+      let remaining = 30;
+      btn.innerHTML = '<span>Please wait ' + remaining + 's</span>';
+      const interval = setInterval(() => {
+        remaining--;
+        if (remaining <= 0) {
+          clearInterval(interval);
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+          btn.style.opacity = "1";
+          isSubmitting = false;
+        } else {
+          btn.innerHTML = '<span>Please wait ' + remaining + 's</span>';
+        }
+      }, 1000);
+    }, 1500);
   });
 }
