@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Us - NEXFLOW</title>
+    <title>Contact Us</title>
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,7 +65,12 @@
             Let's Build Something<br />
             <span
               style="
-                background: linear-gradient(135deg, var(--accent-1), var(--accent-2), var(--accent-3));
+                background: linear-gradient(
+                  135deg,
+                  var(--accent-1),
+                  var(--accent-2),
+                  var(--accent-3)
+                );
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
               "
@@ -123,14 +128,17 @@
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
+                    <h3
+                      class="font-semibold mb-1"
+                      style="color: var(--text-primary)"
+                    >
                       Email Us
                     </h3>
                     <p
                       class="text-sm"
                       style="color: rgba(var(--text-rgb), 0.45)"
                     >
-                      hello@nexflow.ai
+                      vibecheckkits@gmail.com
                     </p>
                   </div>
                 </div>
@@ -146,7 +154,10 @@
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
+                    <h3
+                      class="font-semibold mb-1"
+                      style="color: var(--text-primary)"
+                    >
                       Call Us
                     </h3>
                     <p
@@ -169,7 +180,10 @@
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
+                    <h3
+                      class="font-semibold mb-1"
+                      style="color: var(--text-primary)"
+                    >
                       Location
                     </h3>
                     <p
@@ -192,7 +206,10 @@
                     ></i>
                   </div>
                   <div>
-                    <h3 class="font-semibold mb-1" style="color: var(--text-primary)">
+                    <h3
+                      class="font-semibold mb-1"
+                      style="color: var(--text-primary)"
+                    >
                       Response Time
                     </h3>
                     <p
@@ -219,36 +236,52 @@
                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                       <label
-                        for="name"
+                        for="first-name"
                         class="block text-xs font-mono-accent tracking-wider mb-2"
                         style="color: rgba(var(--text-rgb), 0.4)"
-                        >NAME</label
+                        >FIRST NAME</label
                       >
                       <input
                         type="text"
-                        id="name"
-                        name="name"
+                        id="first-name"
+                        name="first-name"
                         required
-                        placeholder="John Doe"
+                        placeholder="John"
                         class="form-input w-full px-4 py-3 rounded-xl text-sm"
                       />
                     </div>
                     <div>
                       <label
-                        for="email"
+                        for="last-name"
                         class="block text-xs font-mono-accent tracking-wider mb-2"
                         style="color: rgba(var(--text-rgb), 0.4)"
-                        >EMAIL</label
+                        >LAST NAME</label
                       >
                       <input
-                        type="email"
-                        id="email"
-                        name="email"
+                        type="text"
+                        id="last-name"
+                        name="last-name"
                         required
-                        placeholder="john@company.com"
+                        placeholder="Doe"
                         class="form-input w-full px-4 py-3 rounded-xl text-sm"
                       />
                     </div>
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-xs font-mono-accent tracking-wider mb-2"
+                      style="color: rgba(var(--text-rgb), 0.4)"
+                      >EMAIL</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      placeholder="john@company.com"
+                      class="form-input w-full px-4 py-3 rounded-xl text-sm"
+                    />
                   </div>
                   <div>
                     <label
@@ -264,11 +297,17 @@
                       class="form-input w-full px-4 py-3 rounded-xl text-sm"
                     >
                       <option value="" disabled selected>Select a topic</option>
-                      <option value="automation-audit">Free Automation Audit</option>
+                      <option value="automation-audit">
+                        Free Automation Audit
+                      </option>
                       <option value="ai-agents">AI Agents</option>
-                      <option value="workflow-automation">Workflow Automation</option>
+                      <option value="workflow-automation">
+                        Workflow Automation
+                      </option>
                       <option value="api-integration">API Integrations</option>
                       <option value="custom-project">Custom Project</option>
+                      <option value="bug-report">Bug Report</option>
+                      <option value="price-quote">Price Quote</option>
                       <option value="other">Other</option>
                     </select>
                   </div>
@@ -328,7 +367,10 @@
           </div>
           <div class="space-y-4">
             <div class="glass-card rounded-2xl p-6 reveal stagger-1">
-              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
+              <h3
+                class="font-semibold text-lg mb-2"
+                style="color: var(--text-primary)"
+              >
                 How long does it take to build an automation system?
               </h3>
               <p
@@ -340,7 +382,10 @@
               </p>
             </div>
             <div class="glass-card rounded-2xl p-6 reveal stagger-2">
-              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
+              <h3
+                class="font-semibold text-lg mb-2"
+                style="color: var(--text-primary)"
+              >
                 What does the free automation audit include?
               </h3>
               <p
@@ -353,7 +398,10 @@
               </p>
             </div>
             <div class="glass-card rounded-2xl p-6 reveal stagger-3">
-              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
+              <h3
+                class="font-semibold text-lg mb-2"
+                style="color: var(--text-primary)"
+              >
                 Do you work with businesses of all sizes?
               </h3>
               <p
@@ -366,7 +414,10 @@
               </p>
             </div>
             <div class="glass-card rounded-2xl p-6 reveal stagger-4">
-              <h3 class="font-semibold text-lg mb-2" style="color: var(--text-primary)">
+              <h3
+                class="font-semibold text-lg mb-2"
+                style="color: var(--text-primary)"
+              >
                 What tools and platforms do you integrate with?
               </h3>
               <p
